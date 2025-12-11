@@ -8,9 +8,10 @@
     overflow: auto;
     text-align: center;
     font-size: 22px;
-    color: rgba(255,255,255,.7);
+    color: #DBEBF0;
     user-select: text;
-    font-family: Arial, sans-serif;
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #0F1219;
 }
 
 #home-header-background {
@@ -19,37 +20,43 @@
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #37d1e5, #164677); /* Градиент из index.html */
+    background: linear-gradient(135deg, #978EF9, #181D34);
     transition-property: height;
     transition-duration: 1s;
 }
 
 .home-section::-webkit-scrollbar {
     width: 10px;
-    background: #d3f3f9; /* Светлее основного градиента */
+    background: #2A2F47;
 }
 
 .home-section::-webkit-scrollbar-track {
-    background: #f0fcff;
+    background: #1A1F34;
     border-radius: 5px;
     margin: 4px 1px;
 }
 
 .home-section::-webkit-scrollbar-thumb {
-    background-color: #a4c9e1;
+    background-color: #978EF9;
     border-radius: 5px;
     margin: 4px 1px;
+    opacity: 0.8;
 }
 
 .home-section i {
     font-size: 150px;
-    color: #2C3E50; /* Основной цвет из палитры */
+    color: #C6BEFF;
+    opacity: 0.9;
+    text-shadow: 0 2px 8px rgba(24,29,52,0.3);
 }
 
 .home-section h2 {
     font-size: 32px;
-    color: #2C3E50; /* Темный текст */
+    color: #DBEBF0;
     margin-top: 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(24,29,52,0.2);
 }
 
 .home-section img.screen {
@@ -59,10 +66,10 @@
 
 .home-section div.part {
     padding: 60px 0;
-    background: #ffffff;
-    color: #2C3E50;
+    background: #1A1F34;
+    color: #DBEBF0;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Легкая тень */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 /* Анимации */
@@ -101,8 +108,8 @@
 .home-section div.part.part1 {
     position: relative;
     padding: 160px 0 100px 0;
-    background: linear-gradient(135deg, #2C3E50, #007bff); /* Темно-синий градиент */
-    color: #FFF;
+    background: linear-gradient(135deg, #181D34, #978EF9);
+    color: #DBEBF0;
 }
 
 .home-section div.part.part1 .right img {
@@ -120,14 +127,14 @@
 }
 
 .home-section div.part.last {
-    background: linear-gradient(135deg, #2C3E50, #007bff);
-    border-top: solid 5px #2C3E50;
-    border-bottom: solid 5px #2C3E50;
+    background: linear-gradient(135deg, #181D34, #2A2F47);
+    border-top: solid 5px #978EF9;
+    border-bottom: solid 5px #C6BEFF;
     padding: 30px 0;
 }
 
 .home-section div.part:nth-child(even) {
-    background: #f4f4f4;
+    background: #2A2F47;
 }
 
 /* Расположение контента */
@@ -168,32 +175,34 @@
     text-align: center;
     padding: 20px 30px;
     border-radius: 10px;
-    background: #3498DB; /* Синий акцент */
-    box-shadow: 0 0 5px rgba(255,255,255,0.5) inset, 0 0 5px rgba(0,0,0,0.5);
-    color: rgba(255,255,255,0.9);
+    background: linear-gradient(135deg, #978EF9, #7B68EE);
+    box-shadow: 0 4px 15px rgba(151,142,249,0.4);
+    color: #DBEBF0;
     font-size: 24px;
     cursor: pointer;
     width: 250px;
     user-select: none;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .home-section .button:hover {
-    background: #2980B9; /* Темнее при наведении */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(151,142,249,0.6);
 }
 
 .home-section .button i {
     font-size: 40px;
     margin-bottom: 10px;
-    color: rgba(255,255,255,0.5);
+    color: #DBEBF0;
+    opacity: 0.9;
 }
 
 /* Футер */
 .home-section .footer {
-    background: linear-gradient(175deg, #2C3E50, transparent);
+    background: linear-gradient(175deg, #181D34, transparent);
     padding: 40px 20%;
     text-align: center;
-    color: #e0f7fa;
+    color: #DBEBF0;
     font-size: 14px;
 }
 
