@@ -1,6 +1,6 @@
 
 #debug-splitbar {
-  background: hsl(300,30%,35%);
+  background: #5D3E7A;
   position: absolute ;
   left: 400px ;
   top: 0 ;
@@ -9,11 +9,11 @@
   cursor: ew-resize;
   z-index: 2 ;
   box-sizing: border-box;
-  border-left: solid 2px hsl(200,10%,10%);
+  border-left: solid 2px #050809;
 }
 
 #debug-main-view {
-  background: hsl(270,10%,20%);
+  background: #1A1426;
   position: absolute ;
   top: 0 ;
   bottom: 0 ;
@@ -45,7 +45,7 @@
   margin-left: px ;
   padding: 2px ;
   border-radius: 5px ;
-  background: hsl(270,10%,20%) ;
+  background: #1A1426 ;
   position: relative;
   left: 3px;
   top: 3px;
@@ -60,25 +60,25 @@
   content: "\f067";
 }
 
-.watch-line.string { background: hsl(110,40%,70%) ; }
+.watch-line.string { background: #A5E82E ; }
 /*.watch-line.string:nth-child(odd) { background: hsl(90,40%,60%) ; }*/
-.watch-line.string .watch-line-value { background: hsl(110,40%,90%) ; }
+.watch-line.string .watch-line-value { background: #D4F878 ; }
 
-.watch-line.number { background: hsl(20,40%,70%) ; }
+.watch-line.number { background: #D79B45 ; }
 /*.watch-line.number:nth-child(odd) { background: hsl(20,40%,60%) ; }*/
-.watch-line.number .watch-line-value { background: hsl(20,40%,90%) ; }
+.watch-line.number .watch-line-value { background: #F4BE8A ; }
 
-.watch-line.function { background: hsl(50,40%,70%) ; }
+.watch-line.function { background: #EADB4C ; }
 /*.watch-line.function:nth-child(odd) { background: hsl(300,40%,60%) ; }*/
-.watch-line.function .watch-line-value { background: hsl(50,40%,90%) ; }
+.watch-line.function .watch-line-value { background: #F5EDB5 ; }
 
-.watch-line.list { background: hsl(180,40%,70%) ; }
+.watch-line.list { background: #81C4E8 ; }
 /*.watch-line.list:nth-child(odd) { background: hsl(200,40%,60%) ; }*/
-.watch-line.list .watch-line-value { background: hsl(200,40%,90%) ; }
+.watch-line.list .watch-line-value { background: #BAE3F6 ; }
 
-.watch-line.object { background: hsl(210,40%,70%) ; }
+.watch-line.object { background: #7DBCE8 ; }
 /*.watch-line.object:nth-child(odd) { background: hsl(160,40%,60%) ; }*/
-.watch-line.object .watch-line-value { background: hsl(160,40%,90%) ; }
+.watch-line.object .watch-line-value { background: #B0DDF5 ; }
 
 
 
@@ -90,7 +90,7 @@
   width: 100px;
   height: 17px ;
   padding: 0px 10px;
-  background: hsl(270,50%,90%);
+  background: #E0D4F7;
   border-radius: 3px;
   white-space: nowrap;
   overflow: hidden ;
@@ -103,7 +103,7 @@
   bottom: 1px;
   width: 98px;
   height: 15px ;
-  background: hsl(270,50%,100%);
+  background: #FFFFFF;
 
   border: solid 1px rgba(0,0,0,.5) ;
   border-radius: 3px ;
@@ -119,7 +119,7 @@
 
 
 #debug-main-toolbar {
-  background: hsl(300,40%,45%) ;
+  background: #8B4FA8 ;
   position: absolute ;
   top: 0 ;
   left: 0 ;
@@ -135,7 +135,7 @@
 #debug-main-toolbar div {
   display: inline-block ;
   border-radius: 5px ;
-  background-color: hsl(300,30%,35%) ;
+  background-color: #5D3E7A ;
   margin-right: 20px ;
   color: rgba(255,255,255,.8);
   padding: 3px 10px ;
@@ -157,7 +157,7 @@
   right: 0px ;
   box-sizing: border-box ;
   height: 40px ;
-  background: hsl(300,30%,40%);
+  background: #6B4880;
   color: rgba(255,255,255,.8) ;
   white-space: nowrap;
   overflow: hidden ;
@@ -216,7 +216,7 @@
   right: 0px ;
   box-sizing: border-box ;
   height: 38px ;
-  background: hsl(180,50%,40%);
+  background: #00BCD4;
   color: rgba(255,255,255,.8) ;
   white-space: nowrap;
   overflow: hidden ;

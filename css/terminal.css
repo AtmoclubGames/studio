@@ -33,7 +33,7 @@
   left: 0 ;
   right: 0 ;
   height: 40px ;
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
   overflow: hidden ;
   white-space: nowrap;
 }
@@ -51,19 +51,19 @@
   margin-left: 1px ;
   padding: 10px 15px ;
   cursor: pointer ;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
 }
 #terminal-toolbar .buttons div:hover  {
-  background: hsl(160,50%,60%);
+  background: #5FE59F;
 }
 
 #terminal-toolbar .buttons div:active  {
-  background: hsl(160,30%,30%);
+  background: #34AD54;
 }
 #terminal-toolbar .buttons .selected,
 #terminal-toolbar .buttons div.selected:hover
 {
-  background: hsl(160,20%,35%);
+  background: #3D9B48;
   cursor: default ;
 }
 #open-timemachine-button {
@@ -72,7 +72,7 @@
   top: -9px;
   bottom: 9px;
   padding: 16px 8px 8px 8px;
-  background: hsl(180,50%,40%);
+  background: #60A5FA;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 0 3px #000;
@@ -84,7 +84,7 @@
   top: 4px;
   bottom: 5px;
   padding: 7px 16px 7px 11px;
-  background: hsl(300,30%,40%);
+  background: #C6BEFF;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 0 3px #000;
@@ -92,11 +92,11 @@
 
 
 #console-options {
-  background: hsl(200,20%,20%);
+  background: #0F1219;
   display: block ;
   line-height: 25px ;
   white-space: nowrap;
-  color: rgba(255,255,255,.8);
+  color: #DBEBF0;
   position: absolute ;
   top: 42px ;
   left: 0 ;
@@ -125,7 +125,7 @@
   left: 0 ;
   right: 0 ;
   bottom: 40px ;
-  background: hsl(200,50%,8%) ;
+  background: #050809 ;
   font-family: "Ubuntu Mono";
   font-size: 16px;
   overflow: auto ;
@@ -138,7 +138,7 @@
   left: 0 ;
   right: 0 ;
   height: 40px ;
-  background: hsl(200,50%,15%);
+  background: #0F1219;
 }
 #terminal-input-gt {
   position: absolute ;
@@ -148,7 +148,7 @@
   bottom: 0 ;
   font-family: "Ubuntu Mono";
   font-size: 20px;
-  color: hsl(200,100%,70%);
+  color: #978EF9;
   padding: 11px 10px ;
 }
 #terminal-input-container {
@@ -158,7 +158,7 @@
   right: 0 ;
   height: 40px ;
   border: none ;
-  background: hsl(200,50%,15%);
+  background: #0F1219;
 }
 #terminal-input {
   position: absolute ;
@@ -170,10 +170,10 @@
   height: 40px ;
   border: none ;
   width: 100% ;
-  background: hsl(200,50%,15%);
+  background: #0F1219;
   font-family: "Ubuntu Mono";
   font-size: 16px;
-  color: hsl(200,100%,70%);
+  color: #978EF9;
   outline: none ;
   padding: 0 0 0 0 ;
 }
@@ -181,7 +181,7 @@
   padding: 5px ;
   font-family: "Ubuntu Mono";
   font-size: 16px;
-  color: hsl(200,80%,70%);
+  color: #B5C8D1;
   user-select: text ;
 }
 #terminal-lines div div {
@@ -190,10 +190,10 @@
   line-height: 22px ;
 }
 #terminal-lines div div.error {
-  color: hsl(10,80%,70%);
+  color: #F87171;
 }
 #terminal-lines div div.input {
-  background: rgba(255,255,255,.05) ;
+  background: rgba(219,235,240,.05) ;
   border-radius: 3px ;
   padding: 0 4px ;
 }

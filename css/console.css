@@ -22,7 +22,7 @@ html,body {
 .poweroff {
   position: absolute;
   font-size: 4vh;
-  color: hsl(180,50%,40%);
+  color: #00BCD4;
   right: 0;
   top: 2vh;
 }
@@ -39,7 +39,7 @@ html,body {
   margin-right: 2vh ;
   font-size: 3vh;
   padding: 1vh 2vh ;
-  color: hsl(180,50%,40%);
+  color: #00BCD4;
   text-align: center;
   cursor: pointer ;
   border-radius: 1vh ;
@@ -47,7 +47,7 @@ html,body {
 
 .content li.selected {
   color: #EEE ;
-  background: hsl(180,50%,40%);
+  background: #00BCD4;
 }
 
 
@@ -119,24 +119,24 @@ html,body {
 }
 
 .focus {
-  border: solid 1vh hsl(180,50%,50%);
-  box-shadow: 0 0 2vh hsl(180,100%,60%) ;
+  border: solid 1vh #00BCD4;
+  box-shadow: 0 0 2vh #80DEEA ;
   animation: focus-animation 2s infinite;
 }
 
 @keyframes focus-animation {
   0% {
-    border: solid 1vh hsl(180,50%,70%);
-    box-shadow: 0 0 2vh hsl(180,100%,70%) ;
+    border: solid 1vh #1DE9B6;
+    box-shadow: 0 0 2vh #4DD0E1 ;
   }
 
   50% {
-    border: solid 1vh hsl(180,50%,50%);
-    box-shadow: 0 0 2vh hsl(180,100%,30%) ;
+    border: solid 1vh #00BCD4;
+    box-shadow: 0 0 2vh #00838F ;
   }
 
   100% {
-    border: solid 1vh hsl(180,50%,70%);
-    box-shadow: 0 0 2vh hsl(180,100%,70%) ;
+    border: solid 1vh #1DE9B6;
+    box-shadow: 0 0 2vh #4DD0E1 ;
   }
 }

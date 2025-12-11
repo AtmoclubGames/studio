@@ -36,7 +36,7 @@
 
 .tutorials .course {
   border-radius: 10px ;
-  background: hsl(30,50%,90%);
+  background: #FBF3E0;
   color: #000 ;
   display: inline-block ;
   padding: 20px ;
@@ -69,12 +69,12 @@
   overflow: hidden ;
 }
 .tutorials .course li:hover {
-  background: hsl(200,50%,70%) ;
+  background: #7B9DD6 ;
 }
 .tutorials .course li i {
   margin-right: 10px ;
   padding: 10px ;
-  background: hsl(160,50%,50%) ;
+  background: #4ADE80 ;
   color: #FFF ;
   font-size: 10px ;
 }
@@ -108,7 +108,7 @@
   height: 300px ;
   border-radius: 10px ;
   box-shadow: 0 0 20px #000, 0 0 2px 0px #000 ;
-  background: hsl(30,100%,95%);
+  background: #FEF8F0;
   z-index: 10 ;
   display: none ;
   overflow: hidden ;
@@ -120,7 +120,7 @@
     top: 0 ;
     height: 20px;
     padding: 10px 10px;
-    background: hsl(200,50%,40%);
+    background: #978EF9;
     color: #FFF;
     font-size: 16px;
     cursor: move;
@@ -152,7 +152,7 @@
   background: rgba(0,0,0,.1);
 }
 #tutorial-window .navigation i.previous {
-  background: hsl(200,50%,50%);
+  background: #978EF9;
   padding: 12px 10px ;
   position: absolute ;
   left: 0 ;
@@ -161,7 +161,7 @@
   cursor: pointer ;
 }
 #tutorial-window .navigation i.next {
-  background: hsl(200,50%,50%);
+  background: #978EF9;
   padding: 12px 10px ;
   position: absolute ;
   right: 40px ;
@@ -170,7 +170,7 @@
   cursor: pointer ;
 }
 #tutorial-window .navigation i.next.fa-check {
-  background: hsl(160,50%,50%);
+  background: #4ADE80;
 }
 #tutorial-window .navigation span.step {
   padding: 12px 10px ;
@@ -373,7 +373,7 @@
   left: 0 ;
   right: 0 ;
   bottom: 0 ;
-  border-top: solid 10px hsl(200,30%,30%) ;
+  border-top: solid 10px #1A1F34 ;
 }
 
 #tutorials-examples-run iframe {

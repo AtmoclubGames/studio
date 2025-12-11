@@ -40,7 +40,7 @@
   height: 26px ;
   left: 0 ;
   right: 0 ;
-  background: hsl(200,30%,30%) ;
+  background: #1A1F34 ;
   padding: 7px 10px 7px 2px ;
   vertical-align: middle;
   white-space: nowrap;
@@ -49,7 +49,7 @@
 .create-asset-button {
   display: inline-block ;
   padding: 4px 8px ;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
   border-radius: 3px ;
   font-size: 14px ;
   cursor: pointer ;
@@ -63,7 +63,7 @@
   margin-left: 10px ;
   padding: 5px ;
   font-size: 16px ;
-  background: hsl(0,30%,50%) ;
+  background: #E06B6B ;
   border-radius: 3px ;
   cursor: pointer ;
 }
@@ -83,7 +83,7 @@
 }
 
 .assetlist.dragover {
-  background: hsla(0,50%,50%,.2) ;
+  background: rgba(248,113,113,.2) ;
 }
 
 .assetlist .folder {
@@ -92,7 +92,7 @@
 
 .assetlist .folder-title {
   line-height: normal ;
-  background: hsl(200,30%,30%) ;
+  background: #1A1F34 ;
   text-align: left ;
   cursor: pointer ;
   padding: 6px 10px ;
@@ -104,11 +104,11 @@
 }
 
 .assetlist .folder-title:hover {
-  background: hsl(200,30%,40%) ;
+  background: #2A2F47 ;
 }
 
 .assetlist .folder.selected > .folder-title {
-  background: hsl(0,30%,50%) ;
+  background: #E06B6B ;
 }
 
 .assetlist .folder-title i {
@@ -220,7 +220,7 @@
   width: 64px ;
   height: 84px ;
   font-size: 12px ;
-  background: hsl(200,20%,20%);
+  background: #0F1219;
   box-shadow: 0 0 4px 0px #000;
   border-radius: 4px ;
   overflow: hidden ;
@@ -228,7 +228,7 @@
 .asset-box.selected {
   margin: 2px 0 0 0;
   border: solid 1px rgba(255,255,255,.5) ;
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
 }
 .asset-box img {
   position: absolute ;
@@ -253,7 +253,7 @@
   left: 4px ;
   font-size: 8px ;
   color: #FFF ;
-  background: hsl(0,50%,50%);
+  background: #F87171;
   padding: 4px ;
   border-radius: 8px ;
 }
@@ -332,7 +332,7 @@
   top: 0px ;
   height: 40px;
   padding-left: 10px ;
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
   white-space: nowrap;
 }
 
@@ -347,16 +347,16 @@
   margin-left: 1px ;
   padding: 10px 15px ;
   cursor: pointer ;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
 }
 .assetinfo .buttons div:hover {
-  background: hsl(160,50%,60%);
+  background: #5FE59F;
 }
 .assetinfo .buttons div.delete {
-  background: hsl(0,50%,50%);
+  background: #F87171;
 }
 .assetinfo .buttons div.delete:hover {
-  background: hsl(0,50%,60%);
+  background: #F56565;
 }
 
 .assetinfo input {
@@ -387,7 +387,7 @@
   padding: 5px 10px ;
   font-size: 14px ;
   border-radius: 3px ;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
   color: #FFF ;
   cursor: pointer ;
   white-space: nowrap;
@@ -488,7 +488,7 @@
 }
 
 #asset-load-code select option {
-  background-color: hsl(200,50%,10%);
+  background-color: #050809;
   padding: 2px ;
 }
 
@@ -547,7 +547,7 @@
 }
 
 .asset-code-tip select option {
-  background-color: hsl(200,50%,10%);
+  background-color: #050809;
   padding: 2px ;
 }
 

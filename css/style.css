@@ -456,7 +456,7 @@ header li .pastille {
 #language-setting i {
   position: absolute ;
   font-size: 32px ;
-  color: hsl(200,50%,50%);
+  color: #978EF9;
   cursor: pointer;
 }
 #language-setting .lang {
@@ -502,7 +502,7 @@ header li .pastille {
 .language-choice i {
   position: absolute ;
   font-size: 32px ;
-  color: hsl(200,50%,50%);
+  color: #978EF9;
   cursor: pointer;
 }
 .language-choice div {
@@ -596,7 +596,7 @@ header li .pastille {
 #header-progress-xp {
   font-size: 10px ;
   width: 150px ;
-  background: hsl(20,50%,40%);
+  background: #C67D3D;
   border-radius: 3px ;
   padding: 1px 10px ;
 }
@@ -623,7 +623,7 @@ header .username:hover {
   background: rgba(255,255,255,.4);
 }
 header .username.guest {
-  background: hsl(0,50%,40%);
+  background: #F87171;
 }
 header .username img {
   width: 32px ;
@@ -676,10 +676,16 @@ header .username span {
   top: 9px ;
   right: 9px ;
   border-radius: 5px ;
-  background: hsl(0,50%,40%);
+  background: linear-gradient(135deg, #F87171, #F56565);
   padding: 4px 10px ;
   font-size: 14px;
   cursor: pointer ;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+.projectheader .backtoprojects:hover {
+  box-shadow: 0 2px 8px rgba(248,113,113,0.4);
 }
 .projectheader #save-status {
   transition-property: transform, opacity, color ;
@@ -709,11 +715,12 @@ header .username span {
 .projectheader #active-project-users div {
   padding: 3px 8px ;
   border-radius: 10px ;
-  background: hsl(0,50%,50%) ;
-  color: #FFF ;
+  background: linear-gradient(135deg, #F87171, #F56565) ;
+  color: #FFFFFF ;
   font-size: 12px ;
   margin-right: 10px ;
   display: inline-block ;
+  font-weight: 500;
 }
 .projectheader #active-project-users div i {
   margin-right: 5px ;
@@ -783,10 +790,10 @@ header .username span {
   padding: 80px ;
 }
 .about p {
-  color: rgba(255,255,255,.7);
+  color: #DBEBF0;
 }
 .about h2 {
-  color: rgba(255,255,255,.8);
+  color: #DBEBF0;
 }
 .about img {
   width: 150px ;
@@ -795,17 +802,17 @@ header .username span {
 }
 .about a {
   text-decoration: none ;
-  color: hsl(200,100%,70%);
+  color: #978EF9;
 }
 .about a:visited {
-  color: hsl(200,100%,70%);
+  color: #978EF9;
 }
 .about-button-div {
   text-align: center ;
   margin: 40px ;
 }
 .about code {
-  background: rgba(255,255,255,.15);
+  background: rgba(219,235,240,.15);
   padding: 2px 5px ;
   border-radius: 3px ;
   font-family: "Ubuntu Mono";
@@ -814,9 +821,9 @@ header .username span {
 }
 .about pre code {
   display: block ;
-  background: rgba(255,255,255,.15);
+  background: rgba(219,235,240,.15);
   padding: 10px ;
-  color: rgba(255,255,255,.8);
+  color: #DBEBF0;
   border-radius: 3px ;
   font-family: "Ubuntu Mono";
   line-height: 1.2em;
@@ -975,7 +982,7 @@ header .username span {
   height: 150px;
   margin: 10px ;
   padding: 5px ;
-  background: hsl(0,40%,30%) ;
+  background: #D32F2F ;
   border-radius: 5px;
   /*box-shadow: 0 0 10px hsla(0,50%,60%,1);*/
   display: inline-block;
@@ -1096,19 +1103,19 @@ padding-left: 2px ;
 .sidemenu li.selected .fa-cogs { color: hsla(315,100%,70%,1);}
 .sidemenu li.selected .fa-upload { color: hsla(0,100%,70%,1);}
 
-.sidemenu li#menuitem-code.selected { width: 56px ; border-left: solid 4px hsl(0,100%,70%) ; }
-.sidemenu li#menuitem-sprites.selected { width: 56px ; border-left: solid 4px hsl(45,50%,50%) ; }
-.sidemenu li#menuitem-maps.selected { width: 56px ; border-left: solid 4px hsl(90,50%,50%) ; }
-.sidemenu li#menuitem-assets.selected { width: 56px ; border-left: solid 4px hsl(180,50%,50%) ; }
-.sidemenu li#menuitem-sounds.selected { width: 56px ; border-left: solid 4px hsl(135,50%,50%) ; }
-.sidemenu li#menuitem-music.selected { width: 56px ; border-left: solid 4px hsl(180,50%,50%) ; }
-.sidemenu li#menuitem-doc.selected { width: 56px ; border-left: solid 4px hsl(225,50%,50%) ; }
-.sidemenu li#menuitem-sync.selected { width: 56px ; border-left: solid 4px hsl(270,50%,50%) ; }
-.sidemenu li#menuitem-options.selected { width: 56px ; border-left: solid 4px hsl(315,50%,50%) ; }
-.sidemenu li#menuitem-publish.selected { width: 56px ; border-left: solid 4px hsl(0,50%,50%) ; }
+.sidemenu li#menuitem-code.selected { width: 56px ; border-left: solid 4px #F87171 ; }
+.sidemenu li#menuitem-sprites.selected { width: 56px ; border-left: solid 4px #FBBF24 ; }
+.sidemenu li#menuitem-maps.selected { width: 56px ; border-left: solid 4px #4ADE80 ; }
+.sidemenu li#menuitem-assets.selected { width: 56px ; border-left: solid 4px #60A5FA ; }
+.sidemenu li#menuitem-sounds.selected { width: 56px ; border-left: solid 4px #8B5CF6 ; }
+.sidemenu li#menuitem-music.selected { width: 56px ; border-left: solid 4px #EC4899 ; }
+.sidemenu li#menuitem-doc.selected { width: 56px ; border-left: solid 4px #8B5CF6 ; }
+.sidemenu li#menuitem-sync.selected { width: 56px ; border-left: solid 4px #A78BFA ; }
+.sidemenu li#menuitem-options.selected { width: 56px ; border-left: solid 4px #D8B4FE ; }
+.sidemenu li#menuitem-publish.selected { width: 56px ; border-left: solid 4px #FCA5A5 ; }
 
 .sidemenu li:hover {
-  background-color: hsl(200,30%,30%) ;
+  background-color: #1A1F34 ;
   color: hsla(200,10%,100%,.9);
 }
 .sidemenu .selected,.sidemenu .selected:hover {
@@ -1138,7 +1145,7 @@ padding-left: 2px ;
   right: 0px;
   padding: 0px;
   overflow: hidden;
-  border-left: solid 10px hsl(200,30%,30%);
+  border-left: solid 10px #1A1F34;
   border-radius: 10px 0px 0px 0px ;
 }
 
@@ -1209,7 +1216,7 @@ padding-left: 2px ;
   margin: 2px 0px 2px 30px ;
   display: inline-block ;
   padding: 5px 10px;
-  background: linear-gradient(hsl(200,40%,40%) 0%,hsl(200,40%,50%) 10%,hsl(200,40%,40%) 10%,hsl(200,40%,30%) 90%,hsl(200,40%,30%) 90%,hsl(200,40%,20%) 100%);
+  background: linear-gradient(#3A5F99 0%,#4A7FAA 10%,#3A5F99 10%,#2A3F79 90%,#2A3F79 90%,#1A1F34 100%);
   border-radius: 2px ;
   cursor: pointer ;
   min-width: 100px;
@@ -1233,22 +1240,22 @@ padding-left: 2px ;
   margin: 5px;
   padding: 8px;
   border-radius: 25px ;
-  background: hsl(200,10%,80%);
+  background: #CCCCCC;
   color: rgba(0,0,0,.8);
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   cursor: pointer ;
 }
 .editor-toolbar i:hover {
-  background: hsl(200,10%,90%);
+  background: #DDDDDD;
 }
 .editor-toolbar i:active {
-  background: hsl(200,10%,100%);
+  background: #FFFFFF;
 }
 #popmenu {
   position: fixed;
   width: 300px;
   min-height: 200px;
-  background: hsl(200,30%,10%);
+  background: #050809;
   border: solid 1px rgba(255,255,255,.1);
   border-radius: 5px;
   z-index: 4 ;
@@ -1462,7 +1469,7 @@ padding-left: 2px ;
 }
 #create-project-window button {
     font-size: 18px;
-    background: hsl(200,50%,40%);
+    background: #978EF9;
     border-radius: 5px;
     padding: 10px 20px;
     color: #FFF;
@@ -1631,7 +1638,7 @@ a.project-box {
   max-width: 1000px ;
 }
 .help-sections {
-  background: hsl(200,23%,23%);
+  background: #1A1F34;
   padding: 0 10px 10px 0 ;
   position: absolute ;
   top: 0 ;
@@ -1727,14 +1734,14 @@ a.project-box {
   margin: 4px 1px;
 }
 .help-list h1 {
-  color: hsl(0,60%,60%);
+  color: #F87171;
   font-size: 20px;
   margin: 40px 0 0 0 ;
   padding: 0 ;
   cursor: pointer ;
 }
 .help-list h2 {
-  color: hsl(20,80%,70%);
+  color: #F4A460;
   font-size: 18px;
   margin: 10px 0 5px 20px ;
   padding: 0 ;
@@ -1987,7 +1994,7 @@ a.project-box {
 }
 
 .horizontal-splitbar {
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
   position: absolute ;
   left: 400px ;
   top: 0 ;
@@ -1999,7 +2006,7 @@ a.project-box {
 
 .placeholder {
   padding: 40px 40px 10px 40px ;
-  color: hsl(20,60%,60%) ;
+  color: #D4974B ;
   font-size: 24px ;
   text-align: center ;
 }
@@ -2010,14 +2017,14 @@ a.project-box {
   left: 0 ;
   right: 0 ;
   height: 22px ;
-  background: hsl(190,20%,75%);
-  color: #222 ;
+  background: #1A1F34;
+  color: #DBEBF0 ;
   padding: 9px 20px 8px 20px ;
   font-size: 16px ;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
-   border-bottom: rgba(0,0,0,.25);
+   border-bottom: 1px solid rgba(219,235,240,.1);
 }
 
 .meta-message i {
@@ -2033,7 +2040,7 @@ a.project-box {
   padding: 4px 6px ;
   border-radius: 20px ;
   color: #FFF ;
-  background: hsl(0,30%,50%);
+  background: linear-gradient(135deg, #F87171, #F56565);
   margin-left: 10px ;
 }
 
@@ -2090,7 +2097,7 @@ a.project-box {
   border-radius: 20px ;
   padding: 3px 8px ;
   margin: 10px 2px ;
-  background: hsl(200,30%,15%);
+  background: #0F1219;
   color: #FFF ;
   cursor: pointer ;
   font-size: 12px ;
@@ -2103,11 +2110,11 @@ a.project-box {
   color: rgba(0,0,0,.8);
 }
 #projects-tags div.active {
-  background: hsl(200,70%,50%);
-  box-shadow: 0 0 10px hsl(200,70%,50%);
+  background: #7BA3D8;
+  box-shadow: 0 0 10px #7BA3D8;
 }
 #projects-tag div:hover {
-  background: hsl(200,70%,50%);
+  background: #7BA3D8;
 }
 
 
@@ -2156,7 +2163,7 @@ a.project-box {
 }
 
 .createprojectoption select option {
-  background-color: hsl(200,50%,10%);
+  background-color: #050809;
   color: #FFF;
   padding: 2px ;
 }
@@ -2169,7 +2176,7 @@ a.project-box {
 
 #advanced-create-project-options-button {
   border-radius: 5px ;
-  color: hsl(200,50%,50%) ;
+  color: #978EF9 ;
   margin: 60px 0 0px 0 ;
   cursor: pointer ;
 }
@@ -2227,7 +2234,7 @@ img.pixelated {
   bottom: 15px ;
   left: 5px ;
   color: rgba(255,255,255,.9) ;
-  background: hsl(0,50%,50%);
+  background: #F87171;
   font-family: Ubuntu ;
 }
 
@@ -2271,7 +2278,7 @@ img.pixelated {
 }
 
 .likes-button.liked {
-  background: hsl(0,50%,50%);
+  background: #F87171;
 }
 
 

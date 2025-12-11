@@ -1,6 +1,6 @@
 body {
   text-align: center ;
-  background: hsl(200,20%,10%);
+  background: #050809;
   padding: 50px ;
   color: #FFF ;
   font-family: Verdana, sans-serif;
@@ -19,7 +19,7 @@ div,a {
 
 .button {
   display: inline-block ;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
   border-radius: 5px ;
   padding: 20px 40px ;
   cursor: pointer ;

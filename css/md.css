@@ -71,8 +71,8 @@
   padding: 5px ;
 }
 .md code {
-  background: hsla(200,50%,20%,.7);
-  color: hsl(200,100%,95%);
+  background: hsla(219,230,230,.15);
+  color: #F0F8FF;
   border-radius: 3px ;
   font-family: "Ubuntu Mono";
   line-height: 1.2em;
@@ -84,8 +84,8 @@
 }
 .md pre code {
   display: block ;
-  background: hsl(200,50%,20%);
-  color: hsl(200,100%,90%);
+  background: #0D1117;
+  color: #E8F1FF;
   padding: 10px ;
   border-radius: 10px ;
   font-family: "Ubuntu Mono";
@@ -96,7 +96,7 @@
 }
 .md pre .copy-button {
   display: inline-block;
-  background-color: hsl(0,50%,50%);
+  background-color: #F87171;
   color: #FFF;
   font-size: 14px;
   border-radius: 5px;
@@ -110,7 +110,7 @@
   font-family: Source Sans Pro;
 }
 .md pre .copy-button.copied {
-  background-color: hsl(0,0%,50%);
+  background-color: #808080;
 }
 .md a {
   text-decoration: none ;
@@ -142,12 +142,12 @@
 }
 
 .dark.md pre code, .dark.md code {
-  background: hsl(200,25%,25%);
+  background: #1A1F34;
   border: solid 1px rgba(255,255,255,.1);
 }
 
 .dark.md pre code {
-  border-left: solid 10px hsl(200,40%,40%) ;
+  border-left: solid 10px #5B8AB8 ;
   padding-left: 20px ;
 }
 
@@ -158,7 +158,7 @@
 }
 
 .dark.md th {
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
 }
 
 .dark.md tr,.dark.md td,.dark.md th {

@@ -38,7 +38,7 @@
 }
 
 .code-splitbar {
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
   position: absolute ;
   left: 400px ;
   top: 0 ;
@@ -49,7 +49,7 @@
 }
 
 .editor-separator {
-  background: linear-gradient(hsl(200,30%,30%) 0%,hsl(200,20%,20%) 10%,hsl(200,20%,10%) 90%,hsl(200,20%,0%) 100%);  height: 20px ;
+  background: linear-gradient(#1A1F34 0%,#0F1219 10%,#050809 90%,#000000 100%);  height: 20px ;
   position: absolute ;
   padding: 0px 10px;
   font-size: 12px;
@@ -69,7 +69,7 @@
   left: 0px ;
   top: 0px ;
   height: 40px;
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
   border-left: solid 2px rgba(0,0,0,.5);
   text-align: left ;
   padding-left: 20px ;
@@ -86,14 +86,14 @@
   margin-left: 1px ;
   padding: 10px 15px ;
   cursor: pointer ;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
 }
 .runbar .buttons div:hover,.runtime-splitbar .buttons div:hover  {
-  background: hsl(160,50%,60%);
+  background: #5FE59F;
 }
 
 .runbar .buttons div:active,.runtime-splitbar .buttons div:active  {
-  background: hsl(160,30%,30%);
+  background: #34AD54;
 }
 .runbar .buttons img {
   width: 24px ;
@@ -104,14 +104,14 @@
 #qrcode-button {
   margin-left: 20px ;
   border-radius: 5px ;
-  background: hsl(200,50%,40%) ;
+  background: #978EF9 ;
   position: relative ;
   top: -2px ;
   padding: 5px ;
 }
 
 #qrcode-button:hover, #run-link:hover {
-  background: hsl(200,50%,50%) ;
+  background: #A89FFF ;
 }
 
 #take-picture-button {
@@ -133,7 +133,7 @@
 .runbar .buttons .selected,.runtime-splitbar .buttons .selected,
 .runbar .buttons div.selected:hover,.runtime-splitbar .buttons div.selected:hover
 {
-  background: hsl(160,20%,35%);
+  background: #3D9B48;
   cursor: default ;
 }
 #run-link {
@@ -141,7 +141,7 @@
   font-size: 14px ;
   padding: 4px 12px ;
   border-radius: 14px ;
-  background: hsl(200,50%,40%);
+  background: #978EF9;
   margin-left: 20px ;
   white-space: nowrap ;
   overflow: hidden ;
@@ -169,7 +169,7 @@ a#run-link {
   text-align: center;
 }
 .runtime-splitbar {
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
   border-left: solid 2px rgba(0,0,0,.5);
   position: absolute ;
   left: 0px ;
@@ -209,7 +209,7 @@ a#run-link {
   right: 2px ;
   box-sizing: border-box ;
   height: 40px ;
-  background: hsl(240,20%,50%) ;
+  background: #505570 ;
   text-align: left ;
   padding: 7px 20px ;
   white-space: nowrap ;
@@ -222,7 +222,7 @@ a#run-link {
 
 #serverbar i.status {
   margin: 0 10px 0 20px ;
-  background: hsl(0,50%,40%) ;
+  background: #F87171 ;
   border-radius: 40px ;
   border: solid 2px rgba(0,0,0,.5) ;
   width: 14px ;
@@ -233,12 +233,12 @@ a#run-link {
 }
 
 #serverbar i.status.running {
-  background: hsl(160,100%,60%) ;
+  background: #5FE59F ;
 }
 
 #serverbar .button {
   border-radius: 5px ;
-  background: hsl(240,20%,30%) ;
+  background: #3D4555 ;
   color: #FFF ;
   padding: 3px 10px ;
   display: inline-block ;
@@ -285,7 +285,7 @@ a#run-link {
   position: absolute;
   right: 20px ;
   bottom: 5px ;
-  color: hsl(20,20%,20%);
+  color: #1A1614;
   z-index: 4 ;
   margin-left: 5px ;
   cursor: pointer ;
@@ -295,7 +295,7 @@ a#run-link {
 #help-window-content {
   position: absolute ;
   bottom: 0px ;
-  background: hsl(30,100%,90%);
+  background: #FBF3E0;
   border-radius: 20px ;
   padding: 10px ;
   overflow: hidden ;
@@ -319,7 +319,7 @@ a#run-link {
 }
 
 .help-window.disabled #help-window-content {
-  background: hsl(20,0%,60%);
+  background: #999999;
   bottom: 0px ;
   left: 0px ;
   width: 20px ;
@@ -365,7 +365,7 @@ a#run-link {
 
 .help-window .see-doc-button {
   border-radius: 3px ;
-  background: hsl(0,50%,40%);
+  background: #D32F2F;
   font-size: 12px ;
   color: #FFF ;
   padding: 4px 8px ;
@@ -389,16 +389,16 @@ a#run-link {
   top: -2px;
 }
 #source-asset-bar .language.python {
-  background-color: hsl(160,40%,40%) ;
+  background-color: #3A9B68 ;
 }
 #source-asset-bar .language.lua {
-  background-color: hsl(20,40%,40%) ;
+  background-color: #B8654E ;
 }
 #source-asset-bar .language.javascript {
-  background-color: hsl(300,40%,40%) ;
+  background-color: #9B4A9E ;
 }
 #source-asset-bar .language.microscript {
-  background-color: hsl(200,40%,40%) ;
+  background-color: #5B8AB8 ;
 }
 
 .code-tools {
@@ -413,16 +413,16 @@ a#run-link {
   margin-left: 1px ;
   padding: 10px 15px ;
   cursor: pointer ;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
   vertical-align: middle ;
   height: 20px ;
 }
 .code-tools .buttons div:hover {
-  background: hsl(160,50%,60%);
+  background: #5FE59F;
 }
 
 .code-tools .buttons div:active  {
-  background: hsl(160,30%,30%);
+  background: #34AD54;
 }
 #code-font-plus {
   padding: 8px 11px ;
@@ -438,7 +438,7 @@ a#run-link {
 .value-tool-button {
   position: relative ;
   display: inline-block ;
-  background: hsl(200,50%,50%);
+  background: #978EF9;
   color: #FFF ;
   border-radius: 5px ;
   padding: 6px ;
@@ -455,7 +455,7 @@ a#run-link {
   border-radius: 3px ;
   padding: 2px 4px ;
   font-size: 11px ;
-  color: hsl(200,50%,20%);
+  color: #0D1117;
 }
 
 .value-tool-button i {
@@ -483,7 +483,7 @@ a#run-link {
   position: absolute ;
   right: 23px ;
   top: 12px ;
-  box-shadow: 0 0 5px hsl(200,50%,20%);
+  box-shadow: 0 0 5px #0D1117;
 }
 
 #color-value-tool-button {
@@ -507,10 +507,10 @@ a#run-link {
   overflow: hidden ;
 }
 #manage-libs-button:hover {
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
 }
 #manage-libs-button.selected {
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
 }
 #manage-libs-button i {
   margin-right: 10px ;
@@ -572,7 +572,7 @@ a#run-link {
   left: 0 ;
   right: 0 ;
   padding: 10px 12px ;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
   font-size: 18px ;
   cursor: pointer ;
   color: #FFF ;
@@ -593,7 +593,7 @@ a#run-link {
   position: relative ;
 }
 .source-list-item.selected {
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
 }
 .source-list-item i {
   padding: 10px 6px 10px 14px ;
@@ -626,7 +626,7 @@ a#run-link {
   left: 4px ;
   font-size: 8px ;
   color: #FFF ;
-  background: hsl(0,50%,50%);
+  background: #F87171;
   padding: 4px ;
   border-radius: 8px ;
 }
@@ -643,18 +643,18 @@ a#run-link {
   border-radius: 3px ;
   padding: 5px 4px;
   margin: 7px 2px;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
   display: inline-block ;
   font-size: 14px ;
   cursor: pointer ;
 }
 .source-tools i.fa-trash {
-  background: hsl(0,50%,40%);
+  background: #D32F2F;
 }
 
 .value-tool {
   padding: 10px ;
-  background: hsl(200,20%,15%) ;
+  background: #0F1219 ;
   border:solid 1px rgba(255,255,255,.2);
   box-shadow: 0 0 5px #000 ;
   border-radius: 5px ;
@@ -691,7 +691,7 @@ a#run-link {
 }
 
 #run-window {
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
 }
 
 #run-window .minify {
@@ -716,18 +716,18 @@ a#run-link {
 .show-picture div {
   display: inline-block ;
   margin: 10px 0 0 0 ;
-  background: hsl(200,50%,40%);
+  background: #978EF9;
   color: white ;
   border-radius: 5px ;
   padding: 5px 10px ;
   cursor: pointer ;
 }
 .show-picture div.save {
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
 }
 
 .show-picture div.close {
-  background: hsl(0,50%,40%);
+  background: #D32F2F;
 }
 
 
@@ -748,7 +748,7 @@ a#run-link {
   padding-left: 0px ;
   transition-property: padding-left ;
   transition-duration: .5s ;
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
   overflow: hidden ;
 }
 #code-toolbar i {
@@ -757,7 +757,7 @@ a#run-link {
 .code-toolbar .delete {
   padding: 4px 8px ;
   border-radius: 4px ;
-  background: hsl(0,50%,50%);
+  background: #F87171;
   cursor: pointer ;
 }
 .code-toolbar #delete-source i {
@@ -770,7 +770,7 @@ a#run-link {
   left: 2px ;
   right: 2px ;
   bottom: 2px ;
-  background: hsl(200,20%,20%) ;
+  background: #0F1219 ;
   z-index: 4 ;
   padding: 40px ;
   overflow: auto ;
@@ -802,7 +802,7 @@ a#run-link {
 }
 
 #runtime-server-splitbar {
-  background: hsl(200,30%,30%);
+  background: #1A1F34;
   position: absolute ;
   left: 100px ;
   top: 0px ;

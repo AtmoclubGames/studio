@@ -8,7 +8,7 @@
 }
 
 .music-splitbar {
-  background: hsl(200,7%,28%);
+  background: #2A2F47;
   position: absolute ;
   left: 400px ;
   top: 0 ;
@@ -41,7 +41,7 @@
   left: 0 ;
   right: 0 ;
   padding: 0px 30px ;
-  background: hsl(160,50%,40%);
+  background: #4ADE80;
   font-size: 18px ;
   cursor: pointer ;
   color: #FFF ;
