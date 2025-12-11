@@ -1,0 +1,237 @@
+.home-section {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    text-align: center;
+    font-size: 22px;
+    color: rgba(255,255,255,.7);
+    user-select: text;
+    font-family: Arial, sans-serif;
+}
+
+#home-header-background {
+    position: fixed;
+    height: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #37d1e5, #164677); /* Градиент из index.html */
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+.home-section::-webkit-scrollbar {
+    width: 10px;
+    background: #d3f3f9; /* Светлее основного градиента */
+}
+
+.home-section::-webkit-scrollbar-track {
+    background: #f0fcff;
+    border-radius: 5px;
+    margin: 4px 1px;
+}
+
+.home-section::-webkit-scrollbar-thumb {
+    background-color: #a4c9e1;
+    border-radius: 5px;
+    margin: 4px 1px;
+}
+
+.home-section i {
+    font-size: 150px;
+    color: #2C3E50; /* Основной цвет из палитры */
+}
+
+.home-section h2 {
+    font-size: 32px;
+    color: #2C3E50; /* Темный текст */
+    margin-top: 0;
+}
+
+.home-section img.screen {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Тень как в index.html */
+    width: 100%;
+}
+
+.home-section div.part {
+    padding: 60px 0;
+    background: #ffffff;
+    color: #2C3E50;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Легкая тень */
+}
+
+/* Анимации */
+@keyframes screenshot-animation {
+    from {
+        transform: perspective(1000px) rotateY(-25deg) scale(0.9,0.9) translateX(-50px);
+    }
+    to {
+        transform: perspective(1000px) rotateY(0deg) scale(1,1) translateX(0);
+    }
+}
+
+@keyframes text-animation {
+    from {
+        transform: translateX(-20000px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes logo-animation {
+    from {
+        transform: perspective(100px) rotateX(60deg) scale(0.7,0.7);
+    }
+    to {
+        transform: perspective(100px) rotateX(0deg) scale(1,1);
+    }
+}
+
+.home-section .mainlogo {
+    animation: 2s ease-out logo-animation;
+}
+
+/* Стили секций */
+.home-section div.part.part1 {
+    position: relative;
+    padding: 160px 0 100px 0;
+    background: linear-gradient(135deg, #2C3E50, #007bff); /* Темно-синий градиент */
+    color: #FFF;
+}
+
+.home-section div.part.part1 .right img {
+    max-width: 800px;
+    margin-bottom: -20%;
+    animation: 3s ease-in-out screenshot-animation;
+}
+
+.home-section div.part.part1 .p1 {
+    animation: 1s ease-out text-animation;
+}
+
+.home-section div.part.part1 .p2 {
+    animation: 2s ease-out text-animation;
+}
+
+.home-section div.part.last {
+    background: linear-gradient(135deg, #2C3E50, #007bff);
+    border-top: solid 5px #2C3E50;
+    border-bottom: solid 5px #2C3E50;
+    padding: 30px 0;
+}
+
+.home-section div.part:nth-child(even) {
+    background: #f4f4f4;
+}
+
+/* Расположение контента */
+.home-section div.right,
+.home-section div.left,
+.home-section div.center {
+    display: inline-block;
+    text-align: left;
+    width: 400px;
+    padding: 20px 40px;
+    vertical-align: top;
+}
+
+.home-section div.right {
+    text-align: right;
+}
+
+.home-section div.center {
+    text-align: center;
+}
+
+.container h2 {
+    margin: 100px 50px 50px 50px;
+    font-weight: normal;
+    text-align: center;
+    color: #2C3E50;
+}
+
+/* Кнопки */
+.button-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.home-section .button {
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background: #3498DB; /* Синий акцент */
+    box-shadow: 0 0 5px rgba(255,255,255,0.5) inset, 0 0 5px rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.9);
+    font-size: 24px;
+    cursor: pointer;
+    width: 250px;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.home-section .button:hover {
+    background: #2980B9; /* Темнее при наведении */
+}
+
+.home-section .button i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.5);
+}
+
+/* Футер */
+.home-section .footer {
+    background: linear-gradient(175deg, #2C3E50, transparent);
+    padding: 40px 20%;
+    text-align: center;
+    color: #e0f7fa;
+    font-size: 14px;
+}
+
+.home-section .footer p {
+    margin: 40px 0;
+}
+
+.home-section .footer p a {
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.home-section .footer p i {
+    margin: 0 20px;
+    font-size: 10px;
+}
+
+/* Внешние кнопки меню */
+li.menu-external {
+    padding: 10px 15px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+li.menu-external:hover {
+    background: #333;
+}
+
+li.menu-external a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+li.menu-external i {
+    font-size: 18px !important;
+    margin-bottom: 5px;
+}

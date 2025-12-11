@@ -1,0 +1,639 @@
+doctype html
+html(lang=language)
+  head
+    meta(name="description" content="StudioAtmocode - Профессиональный инструмент для разработки игр и приложений. Создавайте кроссплатформенные проекты с минимальными усилиями и максимальным результатом.")
+    meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1")
+    link(rel="alternate" hreflang="pt" href="https://studio.atmocode.ru/ru/")
+    link(rel="alternate" hreflang="en" href="https://studio.atmocode.ru")
+    title "Игровая студия Atmocode — Создавай 2D-игры прямо в браузере!"
+    each css in css_files
+      link(rel="stylesheet" type="text/css" href=css)
+    // Home/news specific styles
+    link(rel="stylesheet" href="/css/home-news.css")
+    link(rel="stylesheet" href="/lib/fontlib/fontawesome/css/all.css")
+    link(rel="stylesheet" href="/lib/fontlib/ubuntu/index.css")
+    link(rel="stylesheet" href="/lib/fontlib/ubuntu-mono/index.css")
+    link(rel="stylesheet" href="/lib/fontlib/source-sans-pro/index.css")
+    link(rel="stylesheet" href="/lib/fontlib/source-sans-pro/700.css")
+    link(rel="apple-touch-icon" sizes="180x180" href="/img/favicon180.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/img/favicon32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/img/favicon16.png")
+    link(rel="manifest" href="/manifest.json")
+    meta(name="description", content="Создавай свои игры онлайн с помощью студии Atmocode.ru! Подходит для детей, студентов и начинающих разработчиков. Атмокод, Атмакод, Atmacod — всё равно найдёшь нас!")
+    meta(name="keywords", content="Игровая студия, создание игр, Atmocode, Атмокод, MicroStudio, платформер, обучение геймдеву, программирование для детей, редактор игр")
+    meta(property="og:title" content="StudioAtmocode - Упрощаем процесс создания игр и приложений для всех платформ")
+    meta(property="og:type" content="StudioAtmocode - Упрощаем процесс создания игр и приложений для всех платформ")
+    meta(property="og:url" content="https://www.atmocode.ru")
+    meta(property="og:image" content=poster)
+    meta(property="og:description" content="StudioAtmocode - Профессиональный инструмент для разработки игр и приложений. Создавайте кроссплатформенные проекты с минимальными усилиями и максимальным результатом.")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content="@microStudio")
+    meta(name="twitter:title" content="StudioAtmocode - Упрощаем процесс создания игр и приложений для всех платформ")
+    meta(name="twitter:description" content="StudioAtmocode - Профессиональный инструмент для разработки игр и приложений. Создавайте кроссплатформенные проекты с минимальными усилиями и максимальным результатом.")
+    meta(name="twitter:image" content=poster)
+    script(src="/lib/jquery/jquery.js")
+    script(src="/lib/jquery-ui/jquery-ui.min.js")
+    script(src="/lib/ace/ace.js")
+    script(src="/lib/ace/mode-microscript.js")
+    script(src="/lib/ace/mode-microscript2.js")
+    script(src="/lib/ace/mode-markdown.js")
+    script(src="/lib/ace/theme-tomorrow_night_bright.js")
+    script(src="/lib/marked/marked.js")
+    script(src="/lib/dompurify/purify.js")
+    script(src="/lib/qrcode/qrcode.js")
+    script.
+      marked = marked.marked ;
+    script.
+      window.ms_languages = !{JSON.stringify(languages)};
+      window.ms_standalone = !{standalone} ;
+      window.ms_project_moderation = !{project_moderation} ;
+      window.translation = !{translation};
+      window.dev_domain = !{dev_domain} ;
+      window.run_domain = !{run_domain} ;
+      window.ms_optional_libs = !{JSON.stringify(optional_libs)};
+      window.ms_graphics_options = !{JSON.stringify(graphics_options)};
+    if default_project_language
+      script.
+        window.ms_default_project_language = "!{default_project_language}" ;
+    if tutorials_root_url
+      script.
+        window.ms_tutorials_root_url = "!{tutorials_root_url}" ;
+    each js in javascript_files
+      script(src=js)
+  body.notranslate(translate="no")
+    noscript
+      p #{translator.get("Your browser has JavaScript disabled. Please enable JavaScript in your browser preferences, in order to use microStudio.")}
+    header
+      div(id="create-account-button" title=translator.get("Create My Account"))
+        <i class="login fa fa-user-plus"></i><span>#{translator.get("Create My Account")}</span>
+      div(id="login-button" title=translator.get("Login"))
+        <i class="login fa fa-sign-in-alt"></i><span>#{translator.get("Login")}</span>
+      div.login-info#login-info
+        div.username
+          img(style="display: none;")
+          i.fa.fa-user
+          span#user-nick
+      div#header-progress-summary.hidden
+        div#header-progress-level Level 0
+        div#header-progress-xp 0
+      i.fas.fa-bars.main-menu#main-menu-button
+      img.logo#logo(src="/img/studioAtmocode.png" alt="StudioAtmocode" title="StudioAtmocode")
+      div.titlemenu
+        li#menu-external(title="Главная")
+          a(href="https://atmocode.ru/" target="_blank" style="color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center;")
+            i.fas.fa-home(style="margin-bottom: 5px; font-size: 18px;")
+            span Главная
+        li#menu-explore.selected(title=translator.get("Explore")) <i class="fa fa-search"></i><br /><span>#{translator.get("Explore")}</span>
+        li#menu-projects(title=translator.get("Create")) <i class="fa fa-code"></i><br /><span>#{translator.get("Create")}</span>
+        li#menu-help(title=translator.get("Documentation")) <i class="fa fa-book-open"></i><br /><span>#{translator.get("Documentation")}</span>
+        li#menu-external(title="Палитры")
+          a(href="https://palette.atmocode.ru/" target="_blank" style="color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center;")
+            i.fas.fa-palette(style="margin-bottom: 5px; font-size: 18px;")
+            span Палитры
+        li#menu-external(title="Обучение")
+          a(href="https://promo.atmocode.ru/" target="_blank" style="color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center;")
+            i.fas.fa-graduation-cap(style="margin-bottom: 5px; font-size: 18px;")
+            span Обучение
+        //- li#menu-tutorials(title=translator.get("Tutorials")) <i class="fa fa-lightbulb"></i><br /><span>#{translator.get("Tutorials")}</span>
+        
+        div#language-setting
+          i.fas.fa-comment
+          div.lang.notranslate(translate="no") #{language.toUpperCase()}
+        div.language-menu-container
+          div.language-menu#language-menu
+            div.language-choice#language-choice-en(title="English")
+              i.fas.fa-comment
+              div.notranslate(translate="no") EN
+            div.language-choice#language-choice-fr(title="Français")
+              i.fas.fa-comment
+              div.notranslate(translate="no") FR
+            div.language-choice#language-choice-pl(title="Polski")
+              i.fas.fa-comment
+              div.notranslate(translate="no") PL
+            div.language-choice#language-choice-de(title="Deutsch")
+              i.fas.fa-comment
+              div.notranslate(translate="no") DE
+            div.language-choice#language-choice-it(title="Italiano")
+              i.fas.fa-comment
+              div.notranslate(translate="no") IT
+            div.language-choice#language-choice-pt(title="Português")
+              i.fas.fa-comment
+              div.notranslate(translate="no") PT
+            div.language-choice#language-choice-ru(title="русский")
+              i.fas.fa-comment
+              div.notranslate(translate="no") RU
+            div.language-choice#language-choice-es(title="Español")
+              i.fas.fa-comment
+              div.notranslate(translate="no") ES
+    div.usermenu(style="height:0px;")
+      div.settings <i class="fa fa-cogs"></i> #{translator.get("Settings")}
+      div.profile <i class="fas fa-user-circle"></i> #{translator.get("Profile")}
+      div.progress <i class="fas fa-chart-bar"></i> #{translator.get("Stats & Achievements")}
+      div.logout <i class="fa fa-power-off"></i> #{translator.get("Logout")}
+      div.create-account <i class="fa fa-user-plus"></i> #{translator.get("Create Account")}
+      div.discard-account <i class="fa fa-trash"></i> #{translator.get("Quit and Delete")}
+    div.main-container
+      div.home-section#home-section
+        div.part.part1
+
+          div.center
+            img.mainlogo(src="/img/studioAtmocode.png" alt="StudioAtmocode" style="width: 250px")
+            p.p1 #{translator.get("StudioAtmocode Бесплатный движок для создания игр.")}
+            p.p2 #{translator.get("Создавай игры, изучай программирование, играй, делись, развивайся!")}
+          div.center.right
+            img.screen(src="/img/studioatmocode.png" alt="microStudio view")
+          // Карусель с цитатами
+          div#quotes-carousel.quotes-carousel(style="margin-top: 30px; background: rgba(0,0,0,0.3); border-radius: 12px; padding: 25px; max-width: 800px; margin-left: auto; margin-right: auto;")
+            div.quote-item(style="text-align: center; color: #e0e0e0; font-size: 1.05rem; font-style: italic; line-height: 1.6;")
+              p "Код — это способ дать жизнь своим идеям." — Стив Джобс
+            div.quote-item(style="display: none; text-align: center; color: #e0e0e0; font-size: 1.05rem; font-style: italic; line-height: 1.6;")
+              p "Программирование — это искусство рассказывать компьютеру, что делать." — Дон Нэлл
+            div.quote-item(style="display: none; text-align: center; color: #e0e0e0; font-size: 1.05rem; font-style: italic; line-height: 1.6;")
+              p "Каждый геймер — это мечтатель, а каждый геймдев — волшебник." — Будущее игр
+            div.quote-item(style="display: none; text-align: center; color: #e0e0e0; font-size: 1.05rem; font-style: italic; line-height: 1.6;")
+              p "Ошибки — это шаги к совершенству. Каждая отладка — это обучение." — Мудрость хакеров
+            div.quote-controls(style="text-align: center; margin-top: 15px;")
+              i.fas.fa-chevron-left(style="cursor: pointer; color: #06b6d4; margin: 0 10px; font-size: 18px;")#quote-prev
+              span#quote-indicator(style="color: #999; margin: 0 15px; font-size: 12px;") 1 / 4
+              i.fas.fa-chevron-right(style="cursor: pointer; color: #06b6d4; margin: 0 10px; font-size: 18px;")#quote-next
+ 
+          div#home-header-background
+
+
+ 
+                  // НОВЫЙ БЛОК: Новости Atmocode
+        div.part.news-section
+          h2 Наши новости
+          div#news-container.news-grid(style="max-width: 1200px; margin: 0 auto;")
+            div#news-top.news-top-block
+            div#news-bottom.news-bottom-block
+
+       
+        // НОВЫЙ БЛОК: Дорожная карта развития
+        div.part.roadmap-section
+          h2 Дорожная карта развития Atmocode
+          p(style="max-width: 800px; margin: 0 auto 35px; color: #ccc; text-align: center; font-size: 0.95rem;") Следите за развитием проекта. Новые фичи, инструменты и возможности уже в разработке!
+          div.roadmap-placeholder(style="max-width: 1000px; margin: 0 auto; background: rgba(100,150,255,0.05); border: 2px dashed rgba(100,150,255,0.3); border-radius: 12px; padding: 60px 30px; text-align: center;")
+            i.fas.fa-map(style="font-size: 60px; color: rgba(100,150,255,0.4); margin-bottom: 20px;")
+            h3(style="color: rgba(255,255,255,0.6); margin: 15px 0;") 🚀 Дорожная карта загружается...
+            p(style="color: rgba(255,255,255,0.5); font-size: 0.95rem;") Вскоре здесь появится детальный план развития проекта с этапами, фичами и сроками.
+            p(style="color: rgba(100,150,255,0.6); font-size: 0.9rem;") Следите за обновлениями!
+
+
+        // НОВЫЙ БЛОК: Проверь себя (Квиз)
+        div.part.check-skills-section
+          h2 Проверь свой уровень навыков
+          p(style="max-width: 700px; margin: 0 auto 25px; color: #ccc; text-align: center;") Пройди интерактивный квиз и узнай свой уровень владения программированием и разработкой игр. Результаты помогут тебе выбрать подходящие туториалы и проекты.
+          div.check-skills-cards(style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;")
+            div.skill-card(style="background: linear-gradient(135deg, #4da6ff, #6e54ff); border-radius: 12px; padding: 30px; text-align: center; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;")
+              i.fas.fa-gamepad(style="font-size: 40px; color: #fff; margin-bottom: 15px;")
+              h3(style="color: #fff; margin: 10px 0;") Новичок
+              p(style="color: rgba(255,255,255,0.9); margin: 0 0 15px 0;") Для тех, кто только начинает свой путь
+              button.quiz-btn(type="button" data-quiz="beginner" style="background: #fff; color: #4da6ff; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: all 0.3s; font-size: 0.95rem;") Начать квиз
+            
+            div.skill-card(style="background: linear-gradient(135deg, #ff9d66, #ffb84d); border-radius: 12px; padding: 30px; text-align: center; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;")
+              i.fas.fa-code(style="font-size: 40px; color: #fff; margin-bottom: 15px;")
+              h3(style="color: #fff; margin: 10px 0;") Опытный
+              p(style="color: rgba(255,255,255,0.9); margin: 0 0 15px 0;") Если уже писал код
+              button.quiz-btn(type="button" data-quiz="intermediate" style="background: #fff; color: #ff9d66; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: all 0.3s; font-size: 0.95rem;") Начать квиз
+            
+            div.skill-card(style="background: linear-gradient(135deg, #70d666, #5cc758); border-radius: 12px; padding: 30px; text-align: center; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;")
+              i.fas.fa-rocket(style="font-size: 40px; color: #fff; margin-bottom: 15px;")
+              h3(style="color: #fff; margin: 10px 0;") Профессионал
+              p(style="color: rgba(255,255,255,0.9); margin: 0 0 15px 0;") Для опытных разработчиков
+              button.quiz-btn(type="button" data-quiz="advanced" style="background: #fff; color: #70d666; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: all 0.3s; font-size: 0.95rem;") Начать квиз
+
+        // НОВЫЙ БЛОК: Экосистема Atmocode
+        div.part.ecosystem-section
+          h2 Наши сервисы
+          p(style="max-width: 800px; margin: 0 auto 30px;") Atmocode - это целая экосистема инструментов для разработки игр и приложений. Все сервисы тесно интегрированы между собой для максимального удобства.
+          
+          div.ecosystem-grid(style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto;")
+            div.service-card(style="background: rgba(30,30,40,0.7); border-radius: 12px; padding: 25px; transition: transform 0.3s; border: 1px solid #444;")
+              div(style="display: flex; align-items: center; margin-bottom: 15px;")
+                i.fas.fa-laptop-code(style="font-size: 28px; color: #4da6ff; margin-right: 15px;")
+                h3(style="margin: 0; color: white;") Studio
+              p(style="color: #ccc; margin-bottom: 20px; line-height: 1.5;") Профессиональная среда разработки для создания 2D/3D игр прямо в браузере. Встроенные редакторы кода, спрайтов, карт и звука.
+              a.button(href="https://studio.atmocode.ru/" style="display: inline-block; background: linear-gradient(135deg, #4da6ff, #6e54ff); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: all 0.3s;")
+                i.fas.fa-external-link-alt(style="margin-right: 8px;")
+                | Перейти к Studio
+              
+            div.service-card(style="background: rgba(30,30,40,0.7); border-radius: 12px; padding: 25px; transition: transform 0.3s; border: 1px solid #444;")
+              div(style="display: flex; align-items: center; margin-bottom: 15px;")
+                i.fas.fa-comments(style="font-size: 28px; color: #ff9d66; margin-right: 15px;")
+                h3(style="margin: 0; color: white;") Talk
+              p(style="color: #ccc; margin-bottom: 20px; line-height: 1.5;") Форум и сообщество разработчиков. Обсуждайте проекты, задавайте вопросы, находите команду для совместной работы.
+              a.button(href="https://talk.atmocode.ru/" style="display: inline-block; background: linear-gradient(135deg, #ff9d66, #ff6b6b); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: all 0.3s;")
+                i.fas.fa-external-link-alt(style="margin-right: 8px;")
+                | Перейти к Talk
+                
+            div.service-card(style="background: rgba(30,30,40,0.7); border-radius: 12px; padding: 25px; transition: transform 0.3s; border: 1px solid #444;")
+              div(style="display: flex; align-items: center; margin-bottom: 15px;")
+                i.fas.fa-cube(style="font-size: 28px; color: #70d666; margin-right: 15px;")
+                h3(style="margin: 0; color: white;") Assets
+              p(style="color: #ccc; margin-bottom: 20px; line-height: 1.5;") Библиотека готовых 3D моделей, 2D ассетов, тайлов и анимированных изображений для ваших проектов.
+              a.button(href="https://assets.atmocode.ru/" style="display: inline-block; background: linear-gradient(135deg, #70d666, #4da6ff); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: all 0.3s;")
+                i.fas.fa-external-link-alt(style="margin-right: 8px;")
+                | Перейти к Assets
+                
+            div.service-card(style="background: rgba(30,30,40,0.7); border-radius: 12px; padding: 25px; transition: transform 0.3s; border: 1px solid #444;")
+              div(style="display: flex; align-items: center; margin-bottom: 15px;")
+                i.fas.fa-envelope(style="font-size: 28px; color: #d666ff; margin-right: 15px;")
+                h3(style="margin: 0; color: white;") Почта
+              p(style="color: #ccc; margin-bottom: 20px; line-height: 1.5;") Защищенный почтовый сервис с для общения с сообществом и получения уведомлений.
+              a.button(href="https://atmocode.ru/roundcube" style="display: inline-block; background: linear-gradient(135deg, #d666ff, #ff6b6b); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: all 0.3s;")
+                i.fas.fa-external-link-alt(style="margin-right: 8px;")
+                | Перейти к почте
+        
+        // НОВЫЙ БЛОК: Как начать
+        div.part.start-section
+          h2 Как начать работу с Atmocode
+          div.start-grid(style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto;")
+            div.start-card(style="background: rgba(30,30,40,0.7); padding: 20px; border-radius: 10px; border-left: 4px solid #4da6ff;")
+              h3(style="color: #4da6ff; margin-top: 0;") Начинающий разработчик
+              p(style="color: #ccc;") Начните с изучения базовых концепций через интерактивные туториалы. Создайте свою первую игру за 30 минут.
+              a.button(href="/tutorials" style="display: inline-block; background: #4da6ff; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; margin-top: 10px;") Начать обучение
+              
+            div.start-card(style="background: rgba(30,30,40,0.7); padding: 20px; border-radius: 10px; border-left: 4px solid #ff9d66;")
+              h3(style="color: #ff9d66; margin-top: 0;") Опытный геймдев
+              p(style="color: #ccc;") Используйте профессиональные инструменты для создания сложных проектов. Экспортируйте в различные платформы одним кликом.
+              a.button(href="/projects" style="display: inline-block; background: #ff9d66; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; margin-top: 10px;") Создать проект
+              
+            div.start-card(style="background: rgba(30,30,40,0.7); padding: 20px; border-radius: 10px; border-left: 4px solid #70d666;")
+              h3(style="color: #70d666; margin-top: 0;") Художник
+              p(style="color: #ccc;") Создавайте спрайты и карты с помощью встроенного редактора. Делитесь своими ассетами с сообществом.
+              a.button(href="https://atmocode.ru/assets" style="display: inline-block; background: #70d666; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; margin-top: 10px;") Начать рисовать
+              
+            div.start-card(style="background: rgba(30,30,40,0.7); padding: 20px; border-radius: 10px; border-left: 4px solid #d666ff;")
+              h3(style="color: #d666ff; margin-top: 0;") Преподаватель
+              p(style="color: #ccc;") Создавайте учебные материалы и делитесь ими с учениками. Отслеживайте прогресс студентов.
+              a.button(href="https://atmocode.ru/" style="display: inline-block; background: #d666ff; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; margin-top: 10px;") Для преподавателей
+        
+        // НОВЫЙ БЛОК: Преимущества экосистемы
+        div.part.benefits-section
+          h2 Почему выбирают Atmocode?
+          div.benefits-grid(style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 30px auto;")
+            div.benefit(style="text-align: center; padding: 20px;")
+              i.fas.fa-sync-alt(style="font-size: 40px; color: #4da6ff; margin-bottom: 15px;")
+              h3 Полная интеграция
+              p(style="color: #ccc;") Все сервисы работают как единая система. Изменения в одном сервисе мгновенно отображаются в других.
+              
+            div.benefit(style="text-align: center; padding: 20px;")
+              i.fas.fa-shield-alt(style="font-size: 40px; color: #ff9d66; margin-bottom: 15px;")
+              h3 Безопасность
+              p(style="color: #ccc;") Все данные защищены шифрованием. Регулярные бэкапы и аудит безопасности.
+              
+            div.benefit(style="text-align: center; padding: 20px;")
+              i.fas.fa-globe(style="font-size: 40px; color: #70d666; margin-bottom: 15px;")
+              h3 Доступность
+              p(style="color: #ccc;") Работает на любом устройстве с браузером. Не требует установки сложного ПО.
+              
+            div.benefit(style="text-align: center; padding: 20px;")
+              i.fas.fa-users(style="font-size: 40px; color: #d666ff; margin-bottom: 15px;")
+              h3 Сообщество
+              p(style="color: #ccc;") Активное сообщество разработчиков, готовое помочь и поделиться знаниями.
+        
+        div.part.last
+        //-   img(src="/img/microstudiologo.svg" alt="Студия Atmocode" style="width: 250px")
+        div.part
+          h2 #{translator.get("So what now?")}
+          br
+          div.button#home-action-explore(style="margin: 0 10px;")
+            i.fa.fa-search
+            br
+            span #{translator.get("Explore public projects")}
+          div.button#home-action-create(style="margin: 0 10px;")
+            i.fa.fa-pencil-alt
+            br
+            span #{translator.get("Start creating!")}
+          div.button#home-action-assets(style="margin: 0 10px; background: linear-gradient(135deg, #70d666, #4da6ff);")
+            i.fa.fa-cube
+            br
+            span Перейти к ассетам
+        div.part
+
+        // НОВЫЙ БЛОК: Форма обратной связи и контакты
+        div.part.feedback-section
+          h2 Свяжитесь с нами
+          div.feedback-container(style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto;")
+            // Форма обратной связи
+            div.feedback-form(style="background: rgba(20,30,50,0.8); border-radius: 12px; padding: 30px;")
+              h3(style="color: #e0e0e0; margin-top: 0;") Форма обратной связи
+              p(style="color: #aaa; font-size: 0.9rem;") Любые предложения, вопросы или баги? Напишите нам!
+              form#contact-form
+                div(style="margin-bottom: 15px;")
+                  label(style="display: block; color: #ccc; margin-bottom: 5px; font-size: 0.9rem;") Ваше имя
+                  input(type="text" placeholder="Иван Петров" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #444; background: rgba(255,255,255,0.05); color: #fff; box-sizing: border-box;" required)
+                
+                div(style="margin-bottom: 15px;")
+                  label(style="display: block; color: #ccc; margin-bottom: 5px; font-size: 0.9rem;") Email
+                  input(type="email" placeholder="you@example.com" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #444; background: rgba(255,255,255,0.05); color: #fff; box-sizing: border-box;" required)
+                
+                div(style="margin-bottom: 15px;")
+                  label(style="display: block; color: #ccc; margin-bottom: 5px; font-size: 0.9rem;") Сообщение
+                  textarea(placeholder="Напишите ваше сообщение..." style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #444; background: rgba(255,255,255,0.05); color: #fff; box-sizing: border-box; resize: vertical; min-height: 120px;" required)
+                
+                button#submit-feedback(type="submit" style="width: 100%; background: linear-gradient(135deg, #4da6ff, #6e54ff); color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: all 0.3s;") Отправить
+            
+            // Контакты
+            div.contacts(style="background: rgba(20,30,50,0.8); border-radius: 12px; padding: 30px;")
+              h3(style="color: #e0e0e0; margin-top: 0;") Контакты и ссылки
+              
+              div.contact-item(style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1);")
+                i.fas.fa-envelope(style="color: #06b6d4; margin-right: 10px; font-size: 18px;")
+                a(href="mailto:support@atmocode.ru" style="color: #06b6d4; text-decoration: none;") support@atmocode.ru
+                p(style="color: #aaa; margin: 5px 0 0 28px; font-size: 0.9rem;") Техническая поддержка
+              
+              div.contact-item(style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1);")
+                i.fas.fa-comments(style="color: #70d666; margin-right: 10px; font-size: 18px;")
+                a(href="https://talk.atmocode.ru" target="_blank" style="color: #70d666; text-decoration: none;") Форум сообщества
+                p(style="color: #aaa; margin: 5px 0 0 28px; font-size: 0.9rem;") Обсуждайте идеи и делитесь проектами
+              
+              div.contact-item(style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1);")
+                i.fab.fa-discord(style="color: #7289da; margin-right: 10px; font-size: 18px;")
+                a(href="https://discord.gg/atmocode" target="_blank" style="color: #7289da; text-decoration: none;") Discord сообщество
+                p(style="color: #aaa; margin: 5px 0 0 28px; font-size: 0.9rem;") Реальное время чатов и поддержка
+              
+              div.contact-item(style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1);")
+                i.fab.fa-github(style="color: #fff; margin-right: 10px; font-size: 18px;")
+                a(href="https://github.com/atmocode" target="_blank" style="color: #fff; text-decoration: none;") GitHub
+                p(style="color: #aaa; margin: 5px 0 0 28px; font-size: 0.9rem;") Исходный код и контрибьютинг
+              
+              div.contact-item(style="margin-bottom: 0;")
+                i.fab.fa-twitter(style="color: #1da1f2; margin-right: 10px; font-size: 18px;")
+                a(href="https://twitter.com/atmocode" target="_blank" style="color: #1da1f2; text-decoration: none;") Twitter / X
+                p(style="color: #aaa; margin: 5px 0 0 28px; font-size: 0.9rem;") Новости и обновления
+
+        div.part.footer-social(style="text-align: center; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.1);")
+          p(style="color: #999; margin-bottom: 20px;") Следите за нами в соцсетях
+          div(style="display: flex; justify-content: center; gap: 20px;")
+            a(href="https://twitter.com/atmocode" target="_blank" style="color: #1da1f2; font-size: 24px; transition: all 0.3s;")
+              i.fab.fa-twitter
+            a(href="https://discord.gg/atmocode" target="_blank" style="color: #7289da; font-size: 24px; transition: all 0.3s;")
+              i.fab.fa-discord
+            a(href="https://github.com/atmocode" target="_blank" style="color: #fff; font-size: 24px; transition: all 0.3s;")
+              i.fab.fa-github
+            a(href="https://t.me/atmocode" target="_blank" style="color: #0088cc; font-size: 24px; transition: all 0.3s;")
+              i.fab.fa-telegram
+
+        div.part.footer-note(style="text-align: center; padding: 15px 0; border-top: 1px solid rgba(255,255,255,0.1);")
+          p(style="color: #666; font-size: 0.85rem;") © 2025 Atmocode.Ru  
+        div.footer
+      div.exploreview#explore-section
+        div#explore-bar
+          div#explore-back-button
+            i(class="fa fa-arrow-left")
+            span #{translator.get("Back")}
+          div#explore-tools
+            div#explore-sort-button.hot
+              i.fas.fa-arrows-alt-v
+              span #{translator.get("Hot")}
+            div#explore-type-button.all
+              i.fa
+              span #{translator.get("All")}
+            div#explore-search
+              input#explore-search-input(name="search")
+              i.fa.fa-search
+        div#explore-tags-bar.collapsed
+          div#explore-tags
+          i.fa.fa-caret-right#explore-tags-collapse
+        div#explore-contents
+          div#explore-box-list
+        div#explore-project-details
+          include projectdetails.pug
+      div.help-section#help-section
+        include help.pug
+      div.about-section#about-section
+        include about.pug
+      div.tutorials-section#tutorials-section
+        include tutorials.pug
+      div.usersettings-section#usersettings-section
+        include user.pug
+      div.projects-section#projects-section
+        div.myprojects#myprojects
+          div.title
+            div#projects-search
+              input#projects-search-input(name="search")
+              i.fa.fa-search
+            h1 #{translator.get("My Projects")}
+              div.create-project-button#create-project-button <i class="fa fa-plus-square"></i> #{translator.get("Create New Project")}
+              div.import-project-button#import-project-button <i class="fa fa-upload"></i> #{translator.get("Import Project")}
+          div.project-list#project-list
+        div.projectview#projectview
+          div.projectheader
+            div.backtoprojects#backtoprojects <i class="fa fa-arrow-left"></i> #{translator.get("Back to Projects")}
+            img.pixelated#project-icon
+            i#project-fullscreen.fas.fa-expand(title=translator.get("Toggle Full Screen"))
+            span#project-name Project name
+            i#save-status(class="fa fa-ellipsis-h")
+            div#active-project-users
+              div.active-user
+                i(class="fa fa-user")
+                span username
+          div.sidemenu#sidemenu
+            ul
+              li(id="menuitem-code") <i class="fa fa-code"></i><br /> #{translator.get("Code")}
+              li(id="menuitem-sprites") <i class="fa fa-image"></i><br /> #{translator.get("Sprites")}
+              li(id="menuitem-maps") <i class="fa fa-map"></i><br /> #{translator.get("Maps")}
+              li(id="menuitem-assets") <i class="fa fa-cube"></i><br /> #{translator.get("Assets")}
+              li(id="menuitem-sounds") <i class="fa fa-volume-up"></i><br /> #{translator.get("Sounds")}
+              li(id="menuitem-music") <i class="fa fa-music"></i><br /> #{translator.get("Music")}
+              li(id="menuitem-doc") <i class="fas fa-book"></i><br /> #{translator.get("Doc")}
+              li(id="menuitem-sync") <i class="fas fa-sync"></i><br /> #{translator.get("Sync")}
+              li(id="menuitem-options") <i class="fa fa-cogs"></i><br /> #{translator.get("Settings")}
+              li(id="menuitem-publish") <i class="fa fa-upload"></i><br /> #{translator.get("Publish")}
+              li(id="menuitem-tabs" title=translator.get("Manage tabs and plugins"))
+                i.fas.fa-plus-circle
+          div.section-container#section-container
+            div.section#code-section
+              include code.pug
+            div.section#explore-section
+            div.section#projects-section
+            div.section#sprites-section
+              include sprites.pug
+            div.section#maps-section
+              include maps.pug
+            div.section#assets-section
+              include assets.pug
+            div.section#sounds-section
+              include sounds.pug
+            div.section#music-section
+              include music.pug
+            div.section#doc-section
+              include doc.pug
+            div.section.top-section-border.padding80#sync-section
+              include sync.pug
+            div.section#settings-section.
+              Settings section here
+            div.section#options-section
+              include projectoptions.pug
+            div.section#publish-section
+              include publish.pug
+            div.section#tabs-section
+              include projecttabs.pug
+    div.overlay#login-overlay
+      div#login-window
+        form#guest-panel
+          h2 #{translator.get("Start creating")}
+          div.button#guest-action-guest
+            i.fas.fa-user-clock
+            br
+            h3 #{translator.get("Create as a guest")}
+            p #{translator.get("Start using microStudio without creating an account.")}
+          div.button#guest-action-create
+            i.fa.fa-user-plus
+            br
+            h3 #{translator.get("Create my account")}
+            p #{translator.get("Save your projects, work in teams, publish, vote, comment...")}
+          div.button#guest-action-login
+            i.fa.fa-sign-in-alt
+            br
+            h3 #{translator.get("Login")}
+            p #{translator.get("Log in to your existing account.")}
+        form#login-panel
+          h2 #{translator.get("Registered User")}
+          label #{translator.get("Nickname or e-mail")}
+          br
+          input(type="text" id="login_nick" required)
+          br
+          label #{translator.get("Password")}
+          br
+          input(type="password" id="login_password" required)
+          br
+          a#forgot-password-link(href="#") #{translator.get("Forgot password?")}
+          br
+          br
+          button#login-submit #{translator.get("Log in")}
+          br
+          br
+          p #{translator.get("Don't have an account yet?")}
+          a(href="#" id="switch_to_create_account") #{translator.get("Create my account")}
+        form#forgot-password-panel
+          h2 #{translator.get("Password Recovery")}
+          label #{translator.get("E-mail")}
+          br
+          input(type="text" id="forgot_email" required)
+          br
+          br
+          button#forgot-submit #{translator.get("Send password recovery e-mail")}
+          br
+          br
+          a(href="#" id="switch_from_forgot_to_login") #{translator.get("Back to login")}
+        form#create-account-panel
+          h2 #{translator.get("New User")}
+          label #{translator.get("Nickname")}
+          br
+          input(type="text" id="create_nick" required)
+          br
+          label #{translator.get("E-mail address")}
+          br
+          input(type="email" id="create_email" required placeholder="E-mail address")
+          br
+          label #{translator.get("Password")}
+          br
+          input(type="password" id="create_password" required)
+          br
+          div#create-account-terms
+          div(style="text-align:left")
+            input(type="checkbox" id="create-account-tos" style="margin-bottom:4px")
+            label(for="create-account-tos") #{translator.get("Accept the")}&nbsp;
+            a#create-account-toggle-terms(href="#") #{translator.get("Terms of Use")}
+            br
+            input(type="checkbox" id="create-account-newsletter")
+            label(for="create-account-newsletter") #{translator.get("Receive news (maximum once per month)")}
+          button#create-account-submit #{translator.get("Create Account")}
+          br
+          br
+          p #{translator.get("Already registered?")}
+          a(href="#" id="switch_to_log_in") #{translator.get("Log in to existing account")}
+    div.overlay#create-project-overlay
+      div#create-project-window
+        form#create-project-form
+          h2 #{translator.get("Create New Project")}
+          label #{translator.get("Title")}
+          br
+          input#create-project-title(type="text" required)
+          br
+          br
+          button#create-project-submit #{translator.get("Create Project")}
+          div#advanced-create-project-options-button
+            i.fa
+            span #{translator.get("Advanced")}
+          div#advanced-create-project-options
+            div.createprojectoption#create-project-option-type
+              h3 #{translator.get("Project Type")}
+              select#createprojectoption-type
+                option(value="app") #{translator.get("App (game, demo...)")}
+                option(value="library") #{translator.get("Library")}
+                option(value="plugin") #{translator.get("Plug-in")}
+                option(value="tutorial") #{translator.get("Tutorial")}
+                option(value="example") #{translator.get("Example")}
+                option(value="template") #{translator.get("Template")}
+            div.createprojectoption#create-project-option-language
+              h3 #{translator.get("Language support")}
+              select#createprojectoption-language
+                each val,key in language_engines
+                  option(value=key) #{translator.get(val.title)}
+            div.createprojectoption#create-project-option-graphics
+              h3 #{translator.get("Graphics library")}
+              select#createprojectoption-graphics
+                option(value="M1") #{translator.get("basic graphics API")}
+                option(value="M2D") #{translator.get("micro 2D - Experimental - Built on Pixi.js")}
+                option(value="M3D") #{translator.get("micro 3D - Experimental - Built on Babylon.js")}
+                option(value="PIXI") #{translator.get("Pixi.js - Experimental")}
+                option(value="BABYLON") #{translator.get("Babylon.js - Experimental")}
+            div.createprojectoption#create-project-option-networking
+              h3 #{translator.get("Networking")} <span class="beta-pill">beta</span>
+              input(type="checkbox" id="createprojectoption-networking")
+              label(for="createprojectoption-networking") #{translator.get("Enable networking features")}
+              div.tip #{translator.get("Create online multiplayer games using a client/server networking model")}
+            div.createprojectoption#create-project-option-libs
+              h3 #{translator.get("Additional tools and libraries")}
+              each val,key in optional_libs
+                input(type="checkbox" id="create-project-option-lib-"+key)
+                label(for="create-project-option-lib-"+key) #{translator.get(val.title)}
+                div.tip #{translator.get("Note: this integration is experimental")}
+                br
+    div.overlay#confirm-message-overlay
+      div.confirm-message-box
+        div#confirm-message-text Some text
+        div.confirm-message-buttons
+          div#confirm-message-cancel Cancel
+          div#confirm-message-ok OK
+    div#notification-container
+      div#notification-bubble
+        i(class="fa fa-comment")
+        span Example Bubble Text
+    div#tutorial-overlay
+    div.floating-window#tutorial-window
+      div.titlebar
+        i.icon.fa.fa-lightbulb
+        div.title #{translator.get("Tutorial")}
+        i.minify.fa.fa-compress
+      div.content.md
+      div.navigation
+        i.previous.fa.fa-arrow-left
+        span.step 1/15
+        i.next.fa.fa-arrow-right
+        i.resize.fa.fa-grip-horizontal
+    div.floating-window#run-window
+      div.titlebar.runbar
+        div.title #{translator.get("Run")}
+        div.buttons
+          div#run-button-win(title="Run project")
+            i.fas.fa-play
+          div#pause-button-win.selected(title="Pause execution")
+            i.fas.fa-pause
+          div#step-forward-button-win(title="Run project" style="display: none")
+            i.fas.fa-step-forward
+          div#reload-button-win.selected(title="Restart project")
+            i.fa.fa-redo
+        i.minify.fas.fa-minus-square(style="background:none;")
+      div.content
+      div.navigation
+        i.resize.fa.fa-grip-horizontal
+    canvas#highlighter
+    i.fa.fa-arrow-right#highlighter-arrow
+    div#user-progress-notifications
+    script(src="/lib/ace/main.js")
+    script(src="/lib/ace/home-interactions.js")

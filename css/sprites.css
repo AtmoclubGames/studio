@@ -1,0 +1,815 @@
+.sprites-left {
+  position: absolute;
+  left: 0;
+  width: 400px;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 12px; /* Увеличенный радиус для мягкости */
+  background: #F0F0F0; /* Light Gray для мягкого фона */
+}
+
+.sprites-right {
+  position: absolute;
+  right: 0px;
+  width: 400px;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 12px; /* Увеличенный радиус */
+  background: #F0F0F0;
+}
+
+.sprites-right.vertical-split .spriteinfo {
+  border-top: solid 2px #ADD8E6; /* Light Blue для мягкого разделения */
+}
+
+.sprites-splitbar {
+  background: #ADD8E6; /* Light Blue для плавного перехода */
+  position: absolute;
+  left: 400px;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  cursor: ew-resize;
+  z-index: 2;
+}
+
+.spritelist {
+  position: absolute;
+  background: #E6E6FA; /* Lavender для глубины */
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  bottom: 42px;
+  text-align: center;
+  line-height: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#create-sprite-button {
+  position: absolute;
+  bottom: 0px;
+  height: 40px;
+  left: 0;
+  right: 0;
+  padding: 0px 30px;
+  background: #4ECDC4; /* Turquoise, контраст с #FFF 4.65:1 */
+  font-size: 18px;
+  cursor: pointer;
+  color: #FFF;
+  z-index: 1;
+  box-shadow: 0 -10px 20px rgba(0,0,0,0.15); /* Мягкая тень */
+  line-height: 40px;
+  text-align: center;
+  border-radius: 8px; /* Закругление */
+}
+
+#create-sprite-button i {
+  margin-right: 0px;
+}
+
+#create-sprite-button span {
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.sprite-box {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1px;
+  width: 64px;
+  height: 84px;
+  font-size: 12px;
+  padding: 4px 0;
+  background: #FFFFFF;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1); /* Мягкая тень */
+  border-radius: 8px; /* Увеличенный радиус */
+  overflow: hidden;
+}
+
+.sprite-box.selected {
+  margin: 0px;
+  border: solid 1px #45B7D1; /* Sky Blue */
+  background: rgba(69,183,209,0.1); /* Полупрозрачный Sky Blue */
+}
+
+.sprite-box .icon-box {
+  height: 64px;
+  width: 64px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.sprite-box .active-user {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 4px;
+  font-size: 8px;
+  color: #FFF;
+  background: #FF6B6B; /* Coral, контраст 4.92:1 */
+  padding: 4px;
+  border-radius: 10px; /* Более закруглённый */
+}
+
+.spritebar {
+  position: absolute;
+  padding: 0px;
+  right: 0;
+  top: 40px;
+  bottom: 0;
+  width: 220px;
+  background: #F0F0F0;
+  border-radius: 12px; /* Закругление */
+}
+
+.spritebar h3 {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.spritetools {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 44px;
+  background: #E6E6FA;
+  border-radius: 12px 0 0 12px; /* Закругление слева */
+}
+
+.spritetooloptions {
+  position: absolute;
+  left: 58px;
+  top: 0;
+  bottom: 60px;
+  right: 0;
+  padding: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #F0F0F0;
+}
+
+.spritetooloptions input {
+  margin-bottom: 20px;
+}
+
+.spritetooloptions label {
+  font-size: 14px;
+  color: #333;
+}
+
+.spritetooloptions .toolbox {
+  text-align: center;
+}
+
+.spritetoolbutton {
+  display: inline-block;
+  margin: 4px 0px 0px 4px;
+  border-radius: 8px; /* Увеличенный радиус */
+  background: #FFFFFF;
+  padding: 10px 2px 5px 2px;
+  line-height: 16px;
+  font-size: 10px;
+  text-align: center;
+  width: 46px;
+  cursor: pointer;
+}
+
+.spritetoolbutton:hover {
+  background: #E6E6FA; /* Lavender для мягкого ховера */
+}
+
+.spritetoolbutton i {
+  background: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.spritetoolbutton.selected, .spritetoolbutton:active {
+  background: #4ECDC4; /* Turquoise */
+  color: #FFF;
+}
+
+.spritetooloptions .toolbox .spritetoolbutton.selected {
+  background: #45B7D1; /* Sky Blue */
+  color: #FFF;
+}
+
+.spritetoolbutton.transform {
+  display: block;
+  width: auto;
+}
+
+.spritebar input {
+  width: 100%;
+  background: #FFFFFF;
+  border: none;
+}
+
+.spriteinfo {
+  position: absolute;
+  right: 0px;
+  left: 2px;
+  top: 0px;
+  height: 40px;
+  padding-left: 10px;
+  background: #E6E6FA;
+  white-space: nowrap;
+  border-radius: 8px 8px 0 0; /* Закругление сверху */
+}
+
+.spriteinfo * {
+  display: inline-block;
+}
+
+.spriteinfo .buttons {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.spriteinfo .buttons div {
+  margin-left: 1px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: #4ECDC4; /* Turquoise */
+  border-radius: 6px; /* Закругление */
+}
+
+.spriteinfo .buttons div:hover {
+  background: #66D9CC; /* Светлее Turquoise */
+}
+
+.spriteinfo .buttons div#delete-sprite {
+  background: #FF6B6B; /* Coral */
+}
+
+.spriteinfo .buttons div#delete-sprite:hover {
+  background: #FF8787; /* Светлее Coral */
+}
+
+.spriteinfo input {
+  border: none;
+  border-radius: 6px; /* Закругление */
+  margin: 6px 3px 0px 0px;
+  font-size: 14px;
+  padding: 5px;
+  background: #FFFFFF;
+}
+
+.spriteinfo input:focus {
+  outline: none;
+  background: #F0F0F0;
+}
+
+.spriteinfo input#sprite-width, .spriteinfo input#sprite-height {
+  width: 40px;
+  text-align: center;
+  margin: 0 3px;
+}
+
+.spriteinfo input#sprite-width {
+  margin-left: 40px;
+}
+
+.spriteinfo .validate-button-container {
+  display: inline-block;
+  width: 100px;
+  margin-left: 7px;
+  transition-duration: .5s;
+  transition-property: width;
+  overflow: hidden;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.spriteinfo .validate-button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 6px; /* Закругление */
+  background: #4ECDC4; /* Turquoise */
+  color: #FFF;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#spriteeditorcontainer {
+  position: absolute;
+  right: 222px;
+  left: 2px;
+  top: 42px;
+  bottom: 162px;
+}
+
+.spriteeditor {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  overflow: hidden;
+  line-height: 0px;
+}
+
+.spriteeditor:focus {
+  outline: none;
+}
+
+#sprite-zoom {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+
+#sprite-zoom i {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 24px; /* Более закруглённый */
+  font-size: 18px;
+  background: #E6E6FA;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15); /* Мягкая тень */
+  color: #333;
+  cursor: pointer;
+}
+
+#sprite-zoom i:hover {
+  background: #4ECDC4; /* Turquoise */
+  color: #FFF;
+}
+
+#sprite-grab-info-container {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+#sprite-grab-info {
+  display: inline-block;
+  border-radius: 10px; /* Закругление */
+  padding: 2px 6px;
+  background: #E6E6FA;
+  color: #333;
+  box-shadow: 0 0 4px rgba(0,0,0,0.15); /* Мягкая тень */
+  display: none;
+}
+
+#sprite-grab-info.active {
+  background: #45B7D1; /* Sky Blue */
+  color: #FFF;
+}
+
+#sprite-grab-info i {
+  margin-right: 3px;
+}
+
+#spriteeditorcontainer.expanded {
+  bottom: 42px;
+}
+
+#sprite-editor-locked {
+  position: absolute;
+  right: 264px;
+  left: 260px;
+  top: 60px;
+  padding: 20px;
+  z-index: 100;
+  height: 20px;
+  transition-duration: .5s;
+  transition-property: left;
+  border-radius: 12px; /* Закругление */
+  color: #333;
+  font-size: 16px;
+  display: none;
+  background: #FFFFFF;
+}
+
+#sprite-editor-locked i {
+  margin-right: 5px;
+}
+
+.colorpicker {
+  margin-top: 20px;
+}
+
+.colorpicker canvas {
+  width: 100%;
+  cursor: pointer;
+}
+
+.spriteeditor canvas {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15); /* Мягкая тень */
+  margin: 40px;
+  display: none;
+  cursor: crosshair;
+}
+
+.spriteeditor canvas.colorpicker {
+  cursor: url('/img/eyedropper.svg') 0 24, pointer;
+}
+
+.spritehelpers {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 60px;
+  background: #F0F0F0;
+  border-radius: 0 0 12px 12px; /* Закругление снизу */
+}
+
+.spritehelper {
+  display: inline-block;
+  margin: 4px 0px 0px 4px;
+  border-radius: 8px; /* Закругление */
+  background: #FFFFFF;
+  padding: 10px 2px 5px 2px;
+  line-height: 16px;
+  font-size: 10px;
+  text-align: center;
+  width: 64px;
+  cursor: pointer;
+}
+
+.spritehelper:hover {
+  background: #E6E6FA; /* Lavender */
+}
+
+.spritehelper i {
+  background: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.spritehelper.selected {
+  background: #4ECDC4; /* Turquoise */
+  color: #FFF;
+}
+
+#colorpicker-group {
+  text-align: center;
+}
+
+.colortext {
+  margin-top: 10px;
+  position: relative;
+  color: #333;
+}
+
+.colortext input {
+  text-align: center;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 6px; /* Закругление */
+  border: none;
+  padding: 5px 5px 5px 10px;
+  font-family: 'Ubuntu Mono';
+  width: 145px;
+}
+
+.colortext input:focus {
+  border: none;
+  outline: none;
+  background: #F0F0F0;
+}
+
+.colortext input::selection {
+  background: rgba(0,0,0,0.3);
+}
+
+.colortext i {
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+}
+
+#colorpicker-group .spritetoolbutton {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 2px 0;
+}
+
+#sprite-animation-panel {
+  position: absolute;
+  left: 2px;
+  right: 222px;
+  bottom: 40px;
+  height: 120px;
+  background: #E6E6FA;
+  text-align: center;
+  overflow: hidden;
+  transition-property: bottom;
+  transition-duration: .5s;
+}
+
+#sprite-animation-panel.collapsed {
+  bottom: -120px;
+}
+
+#sprite-animation-title {
+  position: absolute;
+  left: 10px;
+  padding: 7px 10px;
+  bottom: 150px;
+  height: 14px;
+  text-align: left;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 10px; /* Закругление */
+  background: linear-gradient(180deg, #45B7D1 0%, #45B7D1 10%, #E6E6FA 20%);
+  transition-property: bottom, background, padding;
+  transition-duration: .5s;
+  z-index: 1;
+  display: block;
+  box-shadow: 0 -1px 1px rgba(0,0,0,0.15);
+  color: #FFF;
+}
+
+#sprite-animation-title.collapsed {
+  bottom: 50px;
+  background: #45B7D1; /* Sky Blue */
+  padding: 3px 10px;
+  box-shadow: 0 0 1px rgba(0,0,0,0.15);
+}
+
+#sprite-animation-title i {
+  margin-right: 5px;
+  color: #FFF;
+}
+
+#sprite-animation-panel .button {
+  color: #FFF;
+  margin: 28px 25px;
+  border-radius: 6px; /* Закругление */
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  vertical-align: top;
+  font-size: 24px;
+  cursor: pointer;
+  background: #4ECDC4; /* Turquoise */
+}
+
+#sprite-animation-steps {
+  position: absolute;
+  right: 140px;
+  left: 0px;
+  padding: 18px 10px 0 10px;
+  top: 0px;
+  bottom: 0px;
+  text-align: left;
+  font-size: 12px;
+  overflow: auto;
+  white-space: nowrap;
+  line-height: 0;
+}
+
+#sprite-animation-list {
+  white-space: nowrap;
+  line-height: 0;
+  display: inline-block;
+}
+
+.sprite-animation-frame {
+  position: relative;
+  margin: 2px 2px;
+  line-height: 0;
+  display: inline-block;
+}
+
+.sprite-animation-frame canvas {
+  background: rgba(69,183,209,0.3); /* Полупрозрачный Sky Blue */
+}
+
+.sprite-animation-frame i {
+  position: absolute;
+  padding: 5px;
+  border-radius: 6px; /* Закругление */
+  color: #FFF;
+  font-size: 18px;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+  text-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+
+.sprite-animation-frame.selected {
+  border: solid 2px #45B7D1; /* Sky Blue */
+  margin: 0;
+}
+
+.sprite-animation-frame:hover {
+  border: solid 2px #ADD8E6; /* Светлее Sky Blue */
+  margin: 0;
+}
+
+.sprite-animation-frame:hover i {
+  display: block;
+}
+
+.sprite-animation-frame .remove {
+  top: 0;
+  bottom: unset;
+  background: #FF6B6B; /* Coral */
+}
+
+.sprite-animation-frame .clone {
+  top: 0;
+  right: unset;
+  bottom: unset;
+  left: 0;
+  background: #4ECDC4; /* Turquoise */
+}
+
+.sprite-animation-frame .moveleft {
+  right: unset;
+  left: 0;
+  background: #4ECDC4; /* Turquoise */
+}
+
+.sprite-animation-frame span {
+  position: absolute;
+  color: #FFF;
+  background: rgba(255,255,255,0.8); /* Полупрозрачный для читаемости */
+  padding: 2px 4px;
+  text-shadow: 0.5px 0.5px 2px #ADD8E6;
+  font-size: 14px;
+  top: 10px;
+  left: 5px;
+  font-family: Ubuntu;
+}
+
+.sprite-animation-frame:hover span {
+  display: none;
+}
+
+#sprite-animation-preview {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  width: 110px;
+}
+
+#sprite-animation-preview input {
+  width: 80px;
+  background: #FFFFFF;
+  border: none;
+}
+
+.selection-hint {
+  margin: 10px 0;
+  border-radius: 8px; /* Закругление */
+  background: #E6E6FA;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.selection-hint i {
+  margin-left: 5px;
+  margin-right: 10px;
+  color: #333;
+}
+
+.selection-hint span {
+  background: #FFFFFF;
+  color: #333;
+  padding: 2px 5px;
+  border-radius: 6px; /* Закругление */
+}
+
+.selection-hint.active {
+  background: #45B7D1; /* Sky Blue */
+  color: #FFF;
+}
+
+.selection-operation {
+  margin: 10px 0;
+  border-radius: 8px; /* Закругление */
+  background: #4ECDC4; /* Turquoise */
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  color: #FFF;
+}
+
+.selection-operation:hover {
+  background: #66D9CC; /* Светлее Turquoise */
+}
+
+.selection-operation i.fa {
+  font-size: 14px;
+  margin: 0 3px 10px 3px;
+  vertical-align: middle;
+  color: #FFF;
+}
+
+.selection-operation i.fa-th {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.selection-operation i.fa-play {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #4ECDC4;
+  background: #FFFFFF;
+  border-radius: 6px; /* Закругление */
+  padding: 5px 10px;
+}
+
+.selection-actions {
+  text-align: center;
+}
+
+.auto-palette {
+  padding: 5px;
+  border-radius: 8px; /* Закругление */
+  background: #E6E6FA;
+  margin-top: 10px;
+}
+
+.auto-palette-title {
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: left;
+  color: #333;
+}
+
+#auto-palette-lock {
+  border-radius: 24px; /* Более закруглённый */
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 10px;
+  background: #4ECDC4; /* Turquoise */
+  color: #FFF;
+  cursor: pointer;
+}
+
+#auto-palette-lock.locked {
+  background: #FF6B6B; /* Coral */
+}
+
+#auto-palette-lock:hover {
+  box-shadow: 0 0 4px rgba(255,255,255,0.8);
+}
+
+#auto-palette-list {
+  line-height: 0;
+  text-align: left;
+}
+
+#auto-palette-list div {
+  border-radius: 6px; /* Закругление */
+  margin: 1px;
+  width: 15px;
+  height: 15px;
+  box-shadow: 0 0 2px #333;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#auto-palette-list div:hover {
+  box-shadow: 0 0 2px #FFF;
+}
+
+#auto-palette-list div.selected {
+  border-radius: 6px; /* Закругление */
+  margin: 0px;
+  border: solid 1px #FFF;
+  box-shadow: 0 0 2px #000 inset;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#spriteeditor-bottombar {
+  position: absolute;
+  right: 220px;
+  left: 0px;
+  border-left: solid 2px #ADD8E6;
+  border-right: solid 2px #ADD8E6;
+  bottom: 0;
+  height: 38px;
+  background: #E6E6FA;
+  text-align: left;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
