@@ -771,91 +771,91 @@
 /* Цветовая адаптация explore.css под стиль палитр */
 
 .explore-project-box {
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .explore-project-box:hover {
-  background: #f0fefe;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: rgba(255,255,255,.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .explore-project-box .project-tag {
-  background: #26c6da;
+  background: #7B68EE;
   color: #ffffff;
   box-shadow: 0 0 4px 1px rgba(0,0,0,0.2);
 }
 
 .explore-project-title {
-  color: #2C3E50;
-  font-family: Arial, sans-serif;
+  color: #DBEBF0;
+  font-family: 'Source Sans Pro', Verdana;
 }
 
 .explore-project-box .run-button,
 .explore-project-button {
-  background: #2ecc71;
+  background: linear-gradient(135deg, #978EF9, #7B68EE);
   color: #ffffff;
 }
 
 .explore-project-box .run-button:hover,
 .explore-project-button:hover {
-  background: #27ae60;
+  background: linear-gradient(135deg, #A99FFF, #8B76FF);
 }
 
 .explore-project-box .type-label {
-  background: #00acc1;
-  color: #ffffff;
+  background: linear-gradient(180deg, #1A1F34, #181D34);
+  color: #C6BEFF;
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 .explore-project-box .type-label.library {
-  background: #4db6ac;
+  background: #4A8F6F;
 }
 .explore-project-box .type-label.plugin {
-  background: #4fc3f7;
+  background: #4A6D8F;
 }
 .explore-project-box .type-label.tutorial {
-  background: #ce93d8;
+  background: #6F4A8F;
 }
 .explore-project-box .type-label.example {
-  background: #ffcc80;
+  background: #8F7D4A;
 }
 .explore-project-box .type-label.template {
-  background: #b39ddb;
+  background: #6F668F;
 }
 
 .explore-project-likes {
-  background: #26a69a;
+  background: #7B68EE;
   color: #fff;
 }
 .explore-project-likes.voted {
-  background: #e74c3c;
+  background: #F87171;
 }
 
 #explore-tags div {
-  background: rgba(0, 188, 212, 0.2);
-  color: #00796b;
+  background: rgba(123, 104, 238, 0.2);
+  color: #C6BEFF;
 }
 
 #explore-tags div.active,
 #explore-tags div:hover {
-  background: #4dd0e1;
+  background: #7B68EE;
   color: #ffffff;
-  box-shadow: 0 0 6px #4dd0e1;
+  box-shadow: 0 0 6px #7B68EE;
 }
 
 #explore-search input {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.9);
   color: #2C3E50;
 }
 
 #project-details-author a {
-  color: #00796b;
+  color: #DBEBF0;
 }
 
 #project-details-description a,
 #project-details-description a:visited,
 .project-details-comments .contents a,
 .project-details-comments .contents a:visited {
-  color: #00acc1;
+  color: #7B68EE;
 }

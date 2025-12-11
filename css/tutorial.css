@@ -36,8 +36,8 @@
 
 .tutorials .course {
   border-radius: 10px ;
-  background: #FBF3E0;
-  color: #000 ;
+  background: #1A1F34;
+  color: #DBEBF0 ;
   display: inline-block ;
   padding: 20px ;
   margin: 10px ;
@@ -62,19 +62,19 @@
   margin: 4px 0 ;
   padding-right: 10px ;
   border-radius: 5px ;
-  background: rgba(0,0,0,.1);
+  background: rgba(255,255,255,.08);
   text-align: left ;
   vertical-align: middle ;
   cursor: pointer ;
   overflow: hidden ;
 }
 .tutorials .course li:hover {
-  background: #7B9DD6 ;
+  background: rgba(123, 104, 238, 0.3) ;
 }
 .tutorials .course li i {
   margin-right: 10px ;
   padding: 10px ;
-  background: #4ADE80 ;
+  background: linear-gradient(135deg, #978EF9, #7B68EE) ;
   color: #FFF ;
   font-size: 10px ;
 }
@@ -89,13 +89,13 @@
 
 .tutorials .course li i.fa-file-code {
   background: none ;
-  color: rgba(0,0,0,.4) ;
+  color: rgba(123, 104, 238, 0.7) ;
   font-size: 18px ;
   padding: 6px 0 ;
   cursor: pointer ;
 }
 .tutorials .course li i.fa-check {
-  color: rgba(0,0,0,.5);
+  color: rgba(123, 104, 238, 0.8);
   font-size: 16px ;
   padding: 7px ;
 }
@@ -108,7 +108,7 @@
   height: 300px ;
   border-radius: 10px ;
   box-shadow: 0 0 20px #000, 0 0 2px 0px #000 ;
-  background: #FEF8F0;
+  background: #181D34;
   z-index: 10 ;
   display: none ;
   overflow: hidden ;
@@ -170,7 +170,7 @@
   cursor: pointer ;
 }
 #tutorial-window .navigation i.next.fa-check {
-  background: #4ADE80;
+  background: linear-gradient(135deg, #978EF9, #7B68EE);
 }
 #tutorial-window .navigation span.step {
   padding: 12px 10px ;
@@ -178,7 +178,7 @@
   position: absolute ;
   right: 80px ;
   left: 40px ;
-  color: rgba(0,0,0,.9) ;
+  color: rgba(255,255,255,.9) ;
 }
 #tutorial-window .navigation i.resize {
   padding: 12px 10px ;
@@ -267,8 +267,8 @@
 }
 
 .launch-project-box {
-  background: rgba(255,255,255,.8) ;
-  color: rgba(0,0,0,.8) ;
+  background: rgba(255,255,255,.12) ;
+  color: rgba(255,255,255,.9) ;
   border-radius: 5px ;
   font-size: 16px ;
   width: 300px ;
@@ -284,7 +284,7 @@
 }
 
 .launch-project-box:hover {
-  background: rgba(255,255,255,.9) ;
+  background: rgba(255,255,255,.18) ;
 }
 
 .launch-project-box img {
