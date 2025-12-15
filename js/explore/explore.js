@@ -165,8 +165,8 @@ this.Explore = (function() {
   };
 
   Explore.prototype.closed = function() {
-    if (!document.title.startsWith("microStudio")) {
-      return document.title = "microStudio";
+    if (!document.title.startsWith("Студия Атмокод.ру: Российский игровой движок для создания 2D и 3D игр онлайн")) {
+      return document.title = "Студия Атмокод.ру: Российский игровой движок для создания 2D и 3D игр онлайн";
     }
   };
 

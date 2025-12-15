@@ -119,8 +119,8 @@ class @Explore
       #@app.setHomeState()
 
   closed:()->
-    if !document.title.startsWith("Студия Атмокод.ру")
-      document.title = "Студия Атмокод.ру"
+    if !document.title.startsWith("Студия Атмокод.ру: Российский игровой движок для создания 2D и 3D игр онлайн")
+      document.title = "Студия Атмокод.ру: Российский игровой движок для создания 2D и 3D игр онлайн"
 
   findBestTag:(p)->
     tag = p.tags[0]

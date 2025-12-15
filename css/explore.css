@@ -42,7 +42,7 @@
   right: 5px;
   top: 180px;
   color: #FFF;
-  background: hsl(200,50%,40%);
+  background: #7B68EE;
   padding: 2px 8px;
   border-radius: 25px;
   font-size: 12px;
@@ -83,7 +83,7 @@
   border-radius: 10px ;
 }
 .explore-project-box .run-button {
-  background: hsl(160,50%,40%);
+  background: linear-gradient(135deg, #978EF9, #7B68EE);
   padding: 8px 16px ;
   margin-top: 16px ;
 }
@@ -122,10 +122,10 @@
   box-shadow: 0 0 5px #000 ;
 }
 .explore-project-box .type-label.library {
-  background: hsl(160,50%,50%) ;
+  background: #4A8F6F ;
 }
 .explore-project-box .type-label.plugin {
-  background: hsl(200,50%,50%) ;
+  background: #4A6D8F ;
 }
 .explore-project-box .type-label.tutorial {
   background: hsl(300,50%,50%) ;
@@ -149,7 +149,7 @@
 }
 
 .explore-project-button {
-  background: hsl(160,50%,40%);
+  background: linear-gradient(135deg, #978EF9, #7B68EE);
   padding: 4px 8px ;
   border-radius: 3px ;
   margin: 3px 0 ;
@@ -163,7 +163,7 @@
 }
 
 .explore-project-likes {
-  background: hsl(200,50%,40%);
+  background: #7B68EE;
   padding: 2px 4px ;
   border-radius: 3px ;
   margin: 20px 0 ;
@@ -196,8 +196,8 @@
   vertical-align: middle ;
   overflow: hidden ;
   z-index: 1 ;
-  background: hsl(330,30%,30%);
-  border-bottom: solid 2px hsl(200,10%,10%);
+  background: #2A2F47;
+  border-bottom: solid 2px #1A1F34;
 }
 #explore-tags-bar.collapsed {
   height: 30px ;
@@ -227,16 +227,16 @@
   cursor: pointer ;
 }
 #explore-sort-button.new {
-  background: hsl(160,50%,50%);
+  background: #4A8F6F;
 }
 #explore-sort-button.top {
-  background: hsl(200,50%,50%);
+  background: #7B68EE;
 }
 #explore-sort-button i {
   margin-right: 10px ;
 }
 #explore-type-button {
-  background: hsl(200,50%,50%);
+  background: #7B68EE;
   border-radius: 3px ;
   padding: 4px 8px ;
   font-size: 16px ;
@@ -257,10 +257,10 @@
   background: hsl(0,50%,50%);
 }
 #explore-type-button.library {
-  background: hsl(160,50%,50%);
+  background: #4A8F6F;
 }
 #explore-type-button.plugin {
-  background: hsl(200,50%,50%);
+  background: #4A6D8F;
 }
 #explore-type-button.tutorial {
   background: hsl(300,50%,50%);
@@ -330,11 +330,11 @@
   color: rgba(0,0,0,.8);
 }
 #explore-tags div.active {
-  background: hsl(200,70%,50%);
-  box-shadow: 0 0 10px hsl(200,70%,50%);
+  background: #7B68EE;
+  box-shadow: 0 0 10px #7B68EE;
 }
 #explore-tag div:hover {
-  background: hsl(200,70%,50%);
+  background: #7B68EE;
 }
 #explore-project-details {
     display: none;
@@ -343,7 +343,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-top: solid 10px hsl(200,30%,30%);
+    border-top: solid 10px #1A1F34;
 }
 #project-details-info {
   position: absolute ;
@@ -404,7 +404,7 @@
   margin-right: 5px ;
 }
 #project-details-likes {
-  background: hsl(200,50%,40%);
+  background: #7B68EE;
   padding: 2px 4px ;
   border-radius: 3px ;
   margin: 20px 0 ;
@@ -432,7 +432,7 @@
   top: 280px ;
   right: 40px ;*/
   padding: 8px 20px ;
-  background: hsl(160,50%,40%);
+  background: #4A8F6F;
   text-decoration: none ;
   color: #FFF ;
   font-size: 18px ;
@@ -443,7 +443,7 @@
   top: 280px ;
   right: 40px ;*/
   padding: 8px 20px ;
-  background: hsl(200,50%,40%);
+  background: #7B68EE;
   text-decoration: none ;
   color: #FFF ;
   font-size: 18px ;
@@ -454,7 +454,7 @@
   display: inline-block ;
   margin: 2px 4px 2px 0 ;
   border-radius: 15px ;
-  background: hsl(200,50%,40%);
+  background: #7B68EE;
   padding: 3px 8px ;
   font-size: 14px ;
 }
@@ -463,11 +463,11 @@
 }
 
 #project-details-description a {
-  color: hsl(200,50%,50%) ;
+  color: #7B68EE ;
   text-decoration: none ;
 }
 #project-details-description a:visited {
-  color: hsl(200,50%,50%) ;
+  color: #7B68EE ;
 }
 
 #project-details-comments {
@@ -564,7 +564,7 @@
 
 #project-contents-view .sprites .export-panel a {
   border-radius: 5px ;
-  background: hsl(160,50%,40%);
+  background: linear-gradient(135deg, #978EF9, #7B68EE);
   color: #FFF ;
   font-size: 16px ;
   padding: 10px 20px ;
@@ -583,7 +583,7 @@
   transition-property: width ;
 }
 #project-contents-view .sprite div {
-  background: hsl(160,50%,40%);
+  background: #7B68EE;
   cursor: pointer ;
   font-size: 12px ;
   padding: 4px 8px ;
@@ -632,7 +632,7 @@
 
 
 #project-contents-view .doc-render {
-  background: hsl(30,50%,80%);
+  background: #2A2F47;
   padding: 40px ;
   border-radius: 10px ;
 }
@@ -653,7 +653,7 @@
   border-radius: 10px ;
 }
 #project-contents-view .import-button {
-  background: hsl(160,50%,40%);
+  background: linear-gradient(135deg, #978EF9, #7B68EE);
   padding: 10px 20px ;
   border-radius: 10px ;
   cursor: pointer ;
@@ -667,7 +667,7 @@
   z-index: 1 ;
 }
 #project-contents-view .import-button.done {
-  background: hsl(30,50%,40%);
+  background: #4A7F6F;
 }
 
 #project-contents-view .import-button i {
@@ -719,7 +719,7 @@
   padding: 2px 8px ;
   border-radius: 10px ;
   font-size: 12px ;
-  background-color: hsla(200,50%,40%,.5);
+  background-color: rgba(123, 104, 238, 0.3);
   color: #FFF ;
   float: right ;
 }
@@ -727,11 +727,11 @@
   user-select: text ;
 }
 .project-details-comments .contents a {
-  color: hsl(200,50%,50%) ;
+  color: #7B68EE ;
   text-decoration: none ;
 }
 .project-details-comments .contents a:visited {
-  color: hsl(200,50%,50%) ;
+  color: #7B68EE ;
 }
 .project-details-comments textarea {
   margin: 10px 0 ;
@@ -756,16 +756,16 @@
   margin: 20px 10px 20px 0 ;
 }
 .explore-project-language.python {
-  background-color: hsl(160,40%,40%) ;
+  background-color: #4A8F6F ;
 }
 .explore-project-language.lua {
   background-color: hsl(20,40%,40%) ;
 }
 .explore-project-language.javascript {
-  background-color: hsl(300,40%,40%) ;
+  background-color: #6F4A8F ;
 }
 .explore-project-language.microscript {
-  background-color: hsl(200,40%,40%) ;
+  background-color: #7B68EE ;
 }
 
 /* Цветовая адаптация explore.css под стиль палитр */
